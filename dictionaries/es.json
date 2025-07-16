@@ -1,93 +1,53 @@
 {
   "meta": {
-    "title": "Portafolio de Marifer - ¡Bienvenido a Mi Mundo!",
-    "metaDescription": "Un portafolio futurista y visualmente cautivador que muestra mi viaje como desarrolladora frontend. Explora mis proyectos, habilidades y visión creativa para el diseño web.",
-    "keywords": "portafolio, desarrolladora frontend, diseño web, proyectos, habilidades, futurista, visión creativa",
-    "author": "María-Fernanda Villalobos"
+    "title": "María-Fernanda Villalobos | Frontend Developer",
+    "description": "Portafolio de María-Fernanda Villalobos, Desarrolladora Frontend reconocida como #3 en React en Chile. Especialista en la creación de experiencias web inclusivas y de alto rendimiento.",
+    "og_title": "María-Fernanda Villalobos | Frontend Developer",
+    "og_description": "Especialista en la creación de experiencias web inclusivas, accesibles y de alto rendimiento.",
+    "og_image_alt": "Una tarjeta de presentación mostrando una foto de María-Fernanda Villalobos y su título profesional."
   },
   "nav": {
-    "home": "Inicio",
-    "aboutMe": "Acerca de Mi",
+    "about": "Sobre Mí",
     "projects": "Proyectos",
-    "curriculum": "Currículum Vitae",
-    "life": "La Vida",
     "contact": "Contacto"
   },
-  "homeTitle": "Yo soy <span class='changing-word'>Innovadora</span>.",
-  "videoCaptionEn": "Subtítulos en inglés",
-  "videoCaptionEs": "Subtítulos en español",
-  "aboutContent": "¡Saludos, visitantes del futuro!<br><br>\n            Soy <span class=\"fluorescent-blue\">María-Fernanda Villalobos</span>, aka <span\n            class=\"fluorescent-pink\">Marifer</span>.<br><br>\n            Bienvenidos a mi espacio virtual, donde un ser tecnológico como yo se mezcla con líneas de código y\n            creatividad. Mi viaje comenzó en el mundo de la salud, pero mi pasión por la tecnología me llevó a\n            explorar\n            las maravillas del desarrollo de software.<br>\n  \n            Después de incontables líneas de código y travesías por el vasto mundo del desarrollo web y móvil, aquí\n            estoy, lista para enfrentar desafíos futuristas.<br> Mi misión: transformar ideas en experiencias\n            digitales\n            asombrosas.<br>\n  \n            ¡Vamos a codificar el mañana juntos!",
-  "changingWords": [
-    "Innovadora",
-    "Exploradora",
-    "Visionaria",
-    "Colaboradora",
-    "Inquisitiva",
-    "Desarrolladora Frontend"
-  ],
-  "videoSrc": "/videos/video_es.mp4",
-  "html5-description": "Estructura de la web.",
-  "css3-description": "Estilos y diseño.",
-  "sass-description": "Preprocesador CSS eficiente.",
-  "javascript-description": "Elementos web interactivos.",
-  "angular-description": "Potente framework de front-end.",
-  "typescript-description": "Superset tipado de JavaScript.",
-  "bootstrap-description": "Framework de diseño responsivo.",
-  "python-description": "Lenguaje de programación versátil.",
-  "django-description": "Framework web de Python.",
-  "node-description": "JavaScript en el lado del servidor.",
-  "express-description": "Framework de Node.js.",
-  "mysql-description": "Sistema de base de datos relacional.",
-  "java-description": "Programación orientada a objetos.",
-  "rest-description": "Arquitectura de servicios web.",
-  "git-description": "Control de versiones.",
-  "gitHub-description": "Plataforma de colaboración para código.",
-  "trello-description": "Herramienta de gestión de proyectos.",
-  "figma-description": "Colaboración en diseño de UI/UX.",
-  "agile-description": "Metodología de gestión de proyectos.",
-  "kanban-description": "Gestión visual de flujo de trabajo.",
-  "scrum-description": "Marco de trabajo ágil.",
-  "projectDescription1": "Red Social para eventos grupales.",
-  "projectDescription2": "Website sobre Astrología Védica",
-  "projectDescription3": "Website Administrativo para Restaurante Vegetariano",
-  "projectDescription4": "Paquete NPM para analizar archivos .md",
-  "projectDescription5": "Simulación Página Web Hites como reto técnico.",
-  "projectTitle6": "Validador Tarjeta Bancaria",
-  "projectDescription6": "Template que valida el número de la tarjeta y su empresa.",
-  "projectDescription7": "Website para fundación de rescate animal.",
-  "projectDescription8": "Juego de memoria y agilidad motriz.",
-  "projectTitle9": "Portafolio estilo Naif",
-  "projectDescription9": "Portafolio para profesionales con estilo Naif.",
-  "projectDescription10": "Juego sensoriomotor en base a un set de batería.",
-  "projectTitle11": "Trivia cine y música",
-  "projectDescription11": "Proyecto Pre-Admisión Laboratoria.",
-  "updateTitle1": "Actualizaciones 13-09-2023.",
-  "updateDescription": "Se agregarán los proyectos de esta sección",
-  "javaDescription1": "Programa Organizador de Grupos.",
-  "javaTitle2": "Juego Cámara Secreta",
-  "javaDescription2": "Versión chilena de BattleShip.",
-  "javaDescription3": "Gestión de Riesgos de Seguridad Industrial.",
-  "resumeIntro": "Bienvenido a mi currículum vitae. Aquí puedes encontrar información detallada sobre mi experiencia, habilidades y educación.",
-  "lifeIntro": "En este espacio, te invito a explorar algunas facetas de mi vida y mis pensamientos a través de preguntas y respuestas.",
-  "energyPlace": "¿Cuál es el lugar que más te llena de energía y te hace sentir en paz?",
-  "energyAnswer": "Me conecto profundamente con la naturaleza, especialmente con el mar y los ríos. Escuchar el sonido del agua y nadar me llena de vitalidad y tranquilidad.",
-  "importantLesson": "¿Cuál es la lección más importante que has aprendido en tu vida hasta ahora?",
-  "lessonAnswer": "He aprendido a ser consciente de mis acciones y sus consecuencias, evitando dañar a otros en el proceso. El concepto de Karma me ha enseñado a cuidar de mí misma y de los demás.",
-  "talkDeceased": "Si pudieras hablar con una persona fallecida, ¿a quién elegirías y qué le dirías?",
-  "talkAnswer": "Mi abuela materna, una figura sabia y resiliente. Más que palabras, simplemente estar a su lado y sentir su presencia. Solo estar.",
-  "worldIssue": "¿Qué causa o problema en el mundo te preocupa profundamente y te gustaría ayudar a resolver?",
-  "worldAnswer": "Me inquieta la manera en que algunas personas ponen su atención en lo que hacen los demás en lugar de cuidarse a sí mismos. En ocasiones, esa búsqueda de atención y validación puede llevar a descuidar su propio bienestar. Mi enfoque es impulsar el autocuidado genuino y ayudar a cambiar esa percepción distorsionada del egoísmo para ser personas más <strong>auténticas</strong>.",
-  "newSkill": "Si tuvieras la oportunidad de aprender una nueva habilidad en un instante, ¿cuál sería?",
-  "skillAnswer": "Me encantaría tocar el piano de manera magistral para expresar mis pensamientos y emociones a través de la música.",
-  "stressRelief": "¿Qué actividad o pasatiempo te hace sentir más vivo y te ayuda a desconectar del estrés?",
-  "reliefAnswer": "Me gusta mucho caminar en modo Forrest Gump, con mis audífonos de casco con cancelación de sonido, totalmente desconectada de lo externo para conectar conmigo.",
-  "fictionalCharacter": "Si fueras un personaje de ficción, ¿quién serías y por qué te identificas con ese personaje?",
-  "characterAnswer": "Me encantaría ser el protagonista de “About Time”. Él tiene la habilidad hereditaria de retroceder en el tiempo. Hay ciertas situaciones que me hubiese gustado abordar de otra forma. Por otro lado, todo lo vivido me ha llevado a tener experiencias grandiosas e irremplazables, así que terminaría pensando como el protagonista al final de la película (no haré más spoilers).",
-  "contactName": "Nombre",
-  "contactEmail": "Correo Electrónico",
-  "contactMessage": "Mensaje",
-  "contactSend": "Enviar",
-  "contactUs": "Estemos en contacto",
-  "footerCopyright": "© 2023 marifer.web.app - Todos los derechos cuánticos reservados 🚀",
-  "footerInfo": "Elaborado en el cosmos digital con ✨ por <a href=\"http://marifer.web.app\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>marifer.web.app</strong></a>, donde los píxeles bailan y los sueños de código alzan el vuelo."
+  "hero": {
+    "name": "María-Fernanda Villalobos",
+    "headline": "Frontend Developer | #3 React.js Developer en Chile (GitHunter)",
+    "mission": "Apasionada por el Diseño Inclusivo y la creación de experiencias web accesibles. Transformo problemas complejos en soluciones de software fluidas, eficientes e intuitivas."
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "paragraph_1": "Reconocida como la #3 React Developer en Chile por GitHunter, mi misión es construir tecnología que se sienta humana. Mi viaje profesional comenzó en las ciencias de la salud, donde aprendí que la habilidad más importante es escuchar con empatía. Hoy, aplico ese mismo principio a un tipo diferente de código.",
+    "paragraph_2": "Creo que una gran experiencia de usuario nace de un profundo respeto por el tiempo y la atención de quien la utiliza. Esto se traduce en interfaces fluidas, tiempos de carga rápidos y un foco meticuloso en los 'detalles que importan'. Mi pasión es crear soluciones accesibles (A11y) e inclusivas, asegurando que el mundo digital esté abierto para todos."
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "project_1": {
+      "name": "Sitio Web Conferencia PyDay Chile",
+      "challenge": "El reto era desarrollar la primera Single-Page Application (SPA) completa para la comunidad Python Chile bajo un plazo de tiempo muy ajustado y con la restricción de un branding preexistente.",
+      "contribution": "Arquitecté y desarrollé la aplicación completa en Next.js, creando una estructura de navegación intuitiva y un diseño adaptable que integró exitosamente el logo de la marca, resultando en una experiencia de usuario fluida y profesional.",
+      "result": "El proyecto fue entregado a tiempo y sirvió como el principal centro de información para los asistentes al evento."
+    },
+    "project_2": {
+      "name": "Reto Hites - E-commerce Móvil",
+      "challenge": "Replicar un diseño de escritorio de una página de producto a una versión completamente responsiva y mobile-first en menos de 24 horas, como parte de un desafío técnico para un proceso de selección.",
+      "contribution": "Construí la interfaz desde cero utilizando React y CSS, enfocándome en un layout flexible con Flexbox y Grid. Tomé la iniciativa de extraer y optimizar los recursos visuales del sitio en producción para asegurar una alta fidelidad con la marca.",
+      "result": "Una landing page funcional y visualmente fiel al diseño original, que demostró mi capacidad para trabajar eficientemente bajo presión. El proyecto fue muy bien recibido por el equipo de contratación, posicionándome como una de las dos finalistas para el puesto."
+    },
+    "project_3": {
+      "name": "Calculadora de Astrología Védica",
+      "challenge": "Diseñar y desarrollar una aplicación web interactiva que calcula y muestra cartas de astrología védica basadas en los datos del usuario, incluyendo su ubicación geográfica.",
+      "contribution": "Construí la aplicación usando JavaScript puro, integrando la API de Google Maps para la selección de ubicación y creando un sistema de visualización dinámico para presentar los resultados de una manera estéticamente atractiva y fácil de entender.",
+      "result": "Una aplicación única y funcional que demuestra la capacidad de manejar la entrada de datos del usuario, trabajar con APIs externas y presentar datos complejos de forma visual."
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "invitation": "Estoy disponible para nuevos desafíos. Si tienes un proyecto en mente o una oportunidad que se alinee con mi perfil, no dudes en contactarme.",
+    "email": "ma.fernanda.villalobos@gmail.com"
+  },
+  "footer": {
+    "text": "Diseñado y construido con esmero por María-Fernanda Villalobos."
+  }
 }

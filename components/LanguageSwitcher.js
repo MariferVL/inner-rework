@@ -7,10 +7,8 @@ export default function LanguageSwitcher() {
   const router = useRouter();
   const pathname = usePathname();
 
-  // Este estado ahora controla de verdad la posición del interruptor
   const [isChecked, setIsChecked] = useState(false);
 
-  // Este efecto establece la posición inicial del interruptor cuando la página carga
   useEffect(() => {
     const langFromUrl = pathname.split('/')[1];
     setIsChecked(langFromUrl === 'en');

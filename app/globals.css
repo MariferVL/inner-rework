@@ -301,10 +301,10 @@ body {
 /* --- Navbar Styles --- */
 
 .nav-link {
-  color: #feffff; 
-  font-size: 0.875rem; 
+  color: #feffff;
+  font-size: 0.875rem;
   text-transform: uppercase;
-  letter-spacing: 0.125em; 
+  letter-spacing: 0.125em;
   font-family: var(--font-orbitron);
   transition: all 0.3s;
 }
@@ -318,11 +318,11 @@ body {
   display: block;
   width: 100%;
   text-align: left;
-  padding: 0.5rem 1rem; 
-  color: #d1d5db; 
-  border-radius: 0.375rem; 
+  padding: 0.5rem 1rem;
+  color: #d1d5db;
+  border-radius: 0.375rem;
   transition: background-color 0.2s ease-in-out;
-  
+
 }
 
 .dropdown-link:hover {
@@ -341,7 +341,33 @@ body {
   }
 }
 
-.animate-fade-in-down {
-  animation: fade-in-down 0.3s ease-out forwards;
+/* --- Hero Section Styles --- */
+
+.glitch {
+  position: relative;
+  color: #feffff;
 }
 
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  overflow: hidden;
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 #ff00c1;
+  animation: glitch-1 2s infinite linear reverse;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: -2px 0 #00fff9;
+  animation: glitch-2 2s infinite linear reverse;
+}

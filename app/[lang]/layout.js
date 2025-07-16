@@ -1,22 +1,22 @@
-import { Orbitron, Cabin } from 'next/font/google';
-import { getDictionary } from '@/lib/get-dictionary';
-import Header from '@/components/Header';
-import '../globals.css';
+import { Orbitron, Cabin } from "next/font/google";
+import { getDictionary } from "@/lib/get-dictionary";
+import Header from "@/components/Header";
+import "../globals.css";
 
 const orbitron = Orbitron({
-  subsets: ['latin'],
-  variable: '--font-orbitron',
-  display: 'swap',
+  subsets: ["latin"],
+  variable: "--font-orbitron",
+  display: "swap",
 });
 
 const cabin = Cabin({
-  subsets: ['latin'],
-  variable: '--font-cabin',
-  display: 'swap',
+  subsets: ["latin"],
+  variable: "--font-cabin",
+  display: "swap",
 });
 
 export async function generateStaticParams() {
-  return [{ lang: 'en' }, { lang: 'es' }];
+  return [{ lang: "en" }, { lang: "es" }];
 }
 
 export async function generateMetadata({ params }) {
@@ -35,9 +35,7 @@ export default async function RootLayout({ children, params }) {
       <body>
         <div className="background"></div>
         <Header lang={lang} />
-        <main>
-          {children}
-        </main>
+        <main>{children}</main>
       </body>
     </html>
   );

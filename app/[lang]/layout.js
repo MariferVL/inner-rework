@@ -1,6 +1,7 @@
 import { Orbitron, Cabin } from "next/font/google";
 import { getDictionary } from "@/lib/get-dictionary";
 import Header from "@/components/Header";
+import ProgressBar from "@/components/ProgressBar";
 import "../globals.css";
 
 const orbitron = Orbitron({
@@ -34,6 +35,7 @@ export default async function RootLayout({ children, params }) {
     <html lang={lang} className={`${orbitron.variable} ${cabin.variable}`}>
       <body>
         <div className="background"></div>
+        <ProgressBar />
         <Header lang={lang} />
         <main>{children}</main>
       </body>

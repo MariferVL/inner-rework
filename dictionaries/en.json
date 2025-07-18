@@ -18,37 +18,59 @@
     "mission": "Passionate about Inclusive Design and crafting accessible web experiences. I transform complex problems into fluid, efficient, and intuitive software solutions."
   },
   "about": {
-    "title": "About Me",
-    "paragraph_1": "Recognized as the #3 React Developer in Chile by GitHunter, my mission is to build technology that feels human. My journey began in health sciences, where I learned that the most important skill is to listen with empathy. Today, I apply that same principle to a different kind of code.",
-    "paragraph_2": "I believe that a great user experience is born from a deep respect for the user's time and attention. This translates into fluid interfaces, fast load times, and a meticulous focus on the 'details that matter.' My passion is crafting accessible (A11y) and inclusive solutions, ensuring that the digital world is open to everyone."
+    "title": "My Philosophy",
+    "image_alt": "Hologram of María-Fernanda projected from a mobile phone.",
+    "paragraph_1": "Being recognized as the #3 React Developer in Chile is more than a ranking; it's a driver for my mission to build technology that feels human. I strive to create interfaces where performance and empathy coexist, ensuring every interaction is both powerful and intuitive.",
+    "paragraph_2": "My background in health sciences taught me to listen with empathy. Today, I apply that same principle to code, focusing on the 'details that matter.' This translates into accessible, user-centric experiences where every pixel has a purpose.",
+    "tech_stack_title": "Core Technologies:",
+    "ideal_team_title": "My Ideal Environment:",
+    "ideal_team_paragraph": "I thrive in collaborative teams that value creative problem-solving and are passionate about building products that make a real difference."
   },
   "projects": {
     "title": "Featured Projects",
+    "challengeLabel": "The Challenge",
+    "contributionLabel": "My Contribution",
+    "resultLabel": "The Result",
+    "demoLabel": "View Live Demo",
+    "codeLabel": "View Code",
     "project_1": {
       "name": "PyDay Chile Conference Website",
-      "challenge": "The challenge was to develop the first complete Single-Page Application (SPA) for the Python Chile community under a tight deadline and with the constraint of a pre-existing brand identity.",
-      "contribution": "I architected and developed the entire application using Next.js, creating an intuitive navigation structure and an adaptive design that successfully integrated the brand's logo, resulting in a fluid and professional user experience.",
-      "result": "The project was delivered on time and served as the main information hub for the event attendees."
+      "year": 2025,
+      "challenge": "To develop the first complete Single-Page Application (SPA) for the Python Chile community under a record-time deadline and with the constraint of a pre-existing brand identity.",
+      "contribution": "I architected and developed the application in Next.js, creating an intuitive navigation structure. Additionally, I introduced a formal documentation process to align the volunteer team and successfully navigated complex team dynamics, letting the quality of the technical result speak for itself.",
+      "result": "The project was delivered on time, exceeding expectations, and served as the main information hub for attendees, setting a new standard for the community's websites."
     },
     "project_2": {
       "name": "Hites - Mobile E-commerce Challenge",
-      "challenge": "To replicate a product page's desktop design into a fully responsive, mobile-first version in less than 24 hours as part of a technical challenge for a selection process.",
-      "contribution": "I built the interface from scratch using React and CSS, focusing on a flexible layout with Flexbox and Grid. I took the initiative to extract and optimize visual assets from the production site to ensure high fidelity with the brand.",
-      "result": "A functional and visually faithful landing page that demonstrated my ability to work efficiently under pressure. The project was very well received by the hiring team, positioning me as one of the two finalists for the role."
+      "year": 2023,
+      "challenge": "In a 24-hour technical challenge, replicate a desktop product page into a fully responsive, mobile-first version, based solely on a screenshot.",
+      "contribution": "I built the interface from scratch with React, focusing on a flexible layout. In a pre-generative-AI challenge, I took the initiative to extract, edit, and optimize visual assets directly from the production site—a resourceful move that impressed the hiring team.",
+      "result": "A functional and visually faithful landing page that demonstrated my ability to work with speed and proactivity. My solution stood out among other candidates and positioned me as one of the two finalists for the role."
     },
     "project_3": {
-      "name": "Vedic Astrology Calculator",
-      "challenge": "To design and develop an interactive web application that calculates and displays Vedic astrology charts based on user data, including their geographical location.",
-      "contribution": "I built the application using vanilla JavaScript, integrating the Google Maps API for location selection and creating a dynamic visualization system to present the results in an aesthetically engaging and easy-to-understand way.",
-      "result": "A unique and functional application that showcases the ability to handle user input, work with external APIs, and present complex data visually."
+      "name": "Client Project: Valeria del Real",
+      "year": 2024,
+      "challenge": "To create the first professional website for a client with decades of experience in therapies but new to the digital world, who provided low-resolution visual assets.",
+      "contribution": "I managed the entire project from concept to deployment. I designed and developed the site, paying special attention to optimizing and treating the images to ensure professional performance and aesthetics despite their original quality.",
+      "result": "A functional, deployed website that fulfilled the client's vision, serving as a professional platform for her brand and demonstrating my ability to guide non-technical clients through the digitalization process."
     }
   },
   "contact": {
     "title": "Contact",
+    "subtitle": "Let's Build Something Amazing Together",
     "invitation": "I am available for new challenges. If you have a project in mind or an opportunity that aligns with my profile, feel free to reach out.",
-    "email": "ma.fernanda.villalobos@gmail.com"
+    "cta": "Ready to collaborate?",
+    "email": "marifervl.dev@gmail.com",
+    "social": {
+      "linkedin": "Connect on LinkedIn",
+      "github": "View my GitHub",
+      "copy_email": "Copy email address"
+    }
   },
   "footer": {
-    "text": "Designed and built with care by María-Fernanda Villalobos."
+    "text": "Designed and built with care by María-Fernanda Villalobos.",
+    "madeWith_part1": "Made with",
+    "madeWith_part2": "and tea",
+    "year": "2025"
   }
 }

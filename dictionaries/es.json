@@ -18,37 +18,59 @@
     "mission": "Apasionada por el Diseño Inclusivo y la creación de experiencias web accesibles. Transformo problemas complejos en soluciones de software fluidas, eficientes e intuitivas."
   },
   "about": {
-    "title": "Sobre Mí",
-    "paragraph_1": "Reconocida como la #3 React Developer en Chile por GitHunter, mi misión es construir tecnología que se sienta humana. Mi viaje profesional comenzó en las ciencias de la salud, donde aprendí que la habilidad más importante es escuchar con empatía. Hoy, aplico ese mismo principio a un tipo diferente de código.",
-    "paragraph_2": "Creo que una gran experiencia de usuario nace de un profundo respeto por el tiempo y la atención de quien la utiliza. Esto se traduce en interfaces fluidas, tiempos de carga rápidos y un foco meticuloso en los 'detalles que importan'. Mi pasión es crear soluciones accesibles (A11y) e inclusivas, asegurando que el mundo digital esté abierto para todos."
+    "title": "Mi Filosofía",
+    "image_alt": "Holograma de María-Fernanda proyectado desde un teléfono móvil.",
+    "paragraph_1": "Ser reconocida como la tercera desarrolladora de React en Chile es más que un ranking; es el motor de mi misión de construir tecnología que se sienta humana. Me esfuerzo por crear interfaces donde el rendimiento y la empatía coexistan, asegurando que cada interacción sea tan poderosa como intuitiva.",
+    "paragraph_2": "Mi formación en ciencias de la salud me enseñó a escuchar con empatía. Hoy aplico ese mismo principio al código, enfocándome en los «detalles que importan». Esto se traduce en experiencias accesibles y centradas en el usuario, donde cada píxel tiene un propósito.",
+    "tech_stack_title": "Tecnologías principales:",
+    "ideal_team_title": "Mi entorno ideal:",
+    "ideal_team_paragraph": "Me desenvuelvo en equipos colaborativos que valoran la resolución creativa de problemas y sienten pasión por construir productos que marcan una verdadera diferencia."
   },
   "projects": {
     "title": "Proyectos Destacados",
+    "challengeLabel": "El Reto",
+    "contributionLabel": "Mi Contribución",
+    "resultLabel": "El Resultado",
+    "demoLabel": "Ver Demo en Vivo",
+    "codeLabel": "Ver Código",
     "project_1": {
       "name": "Sitio Web Conferencia PyDay Chile",
+      "year": 2025,
       "challenge": "El reto era desarrollar la primera Single-Page Application (SPA) completa para la comunidad Python Chile bajo un plazo de tiempo muy ajustado y con la restricción de un branding preexistente.",
       "contribution": "Arquitecté y desarrollé la aplicación completa en Next.js, creando una estructura de navegación intuitiva y un diseño adaptable que integró exitosamente el logo de la marca, resultando en una experiencia de usuario fluida y profesional.",
       "result": "El proyecto fue entregado a tiempo y sirvió como el principal centro de información para los asistentes al evento."
     },
     "project_2": {
       "name": "Reto Hites - E-commerce Móvil",
-      "challenge": "Replicar un diseño de escritorio de una página de producto a una versión completamente responsiva y mobile-first en menos de 24 horas, como parte de un desafío técnico para un proceso de selección.",
-      "contribution": "Construí la interfaz desde cero utilizando React y CSS, enfocándome en un layout flexible con Flexbox y Grid. Tomé la iniciativa de extraer y optimizar los recursos visuales del sitio en producción para asegurar una alta fidelidad con la marca.",
-      "result": "Una landing page funcional y visualmente fiel al diseño original, que demostró mi capacidad para trabajar eficientemente bajo presión. El proyecto fue muy bien recibido por el equipo de contratación, posicionándome como una de las dos finalistas para el puesto."
+      "year": 2023,
+      "challenge": "En un desafío técnico de 24 horas, replicar una página de producto de escritorio a una versión mobile-first completamente responsiva, basándome únicamente en una captura de pantalla.",
+      "contribution": "Construí la interfaz desde cero con React, enfocándome en un layout flexible. En un desafío pre-IA generativa, tomé la iniciativa de extraer, editar y optimizar los recursos visuales directamente del sitio en producción, un acto de ingenio que impresionó al equipo de contratación.",
+      "result": "Una landing page funcional y visualmente fiel al original, que demostró mi capacidad para trabajar con velocidad y proactividad. Mi solución destacó entre los demás candidatos y me posicionó como una de las dos finalistas para el puesto."
     },
     "project_3": {
-      "name": "Calculadora de Astrología Védica",
-      "challenge": "Diseñar y desarrollar una aplicación web interactiva que calcula y muestra cartas de astrología védica basadas en los datos del usuario, incluyendo su ubicación geográfica.",
-      "contribution": "Construí la aplicación usando JavaScript puro, integrando la API de Google Maps para la selección de ubicación y creando un sistema de visualización dinámico para presentar los resultados de una manera estéticamente atractiva y fácil de entender.",
-      "result": "Una aplicación única y funcional que demuestra la capacidad de manejar la entrada de datos del usuario, trabajar con APIs externas y presentar datos complejos de forma visual."
+      "name": "Proyecto Cliente: Valeria del Real",
+      "year": 2024,
+      "challenge": "Crear el primer sitio web profesional para una clienta con décadas de trayectoria en terapias, pero nueva en el mundo digital, y que contaba con recursos visuales de baja resolución.",
+      "contribution": "Gestioné todo el proyecto, desde la conceptualización hasta el despliegue. Diseñé y desarrollé el sitio, poniendo especial atención en la optimización y tratamiento de las imágenes para asegurar un rendimiento y una estética profesional a pesar de la calidad original.",
+      "result": "Un sitio web funcional y desplegado que cumplió con la visión de la clienta, sirviendo como una plataforma profesional para su marca y demostrando mi habilidad para guiar a clientes no técnicos en el proceso de digitalización."
     }
   },
   "contact": {
     "title": "Contacto",
+    "subtitle": "Construyamos Algo Increíble Juntos",
     "invitation": "Estoy disponible para nuevos desafíos. Si tienes un proyecto en mente o una oportunidad que se alinee con mi perfil, no dudes en contactarme.",
-    "email": "ma.fernanda.villalobos@gmail.com"
+    "cta": "¿Listo para colaborar?",
+    "email": "marifervl.dev@gmail.com",
+    "social": {
+      "linkedin": "Conecta en LinkedIn",
+      "github": "Ve mi GitHub",
+      "copy_email": "Copiar dirección de correo"
+    }
   },
   "footer": {
-    "text": "Diseñado y construido con esmero por María-Fernanda Villalobos."
+    "text": "Diseñado y construido con cuidado por María-Fernanda Villalobos.",
+    "madeWith_part1": "Hecho con",
+    "madeWith_part2": "y té",
+    "year": "2025"
   }
 }

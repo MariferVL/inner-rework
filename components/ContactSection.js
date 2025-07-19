@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { FaLinkedin, FaGithub, FaEnvelope, FaCheck, FaCopy } from 'react-icons/fa';
 
 export default function ContactSection({ dictionary }) {
@@ -102,7 +103,7 @@ export default function ContactSection({ dictionary }) {
                     {emailCopied ? (
                       <>
                         <FaCheck className="w-4 h-4 animate-pulse" />
-                        <span className="text-green-300 font-semibold">¡Copiado!</span>
+                        <span className="text-green-300 font-semibold">{dictionary.contact.social.copied_email}</span>
                       </>
                     ) : (
                       <>
@@ -134,8 +135,11 @@ export default function ContactSection({ dictionary }) {
               
               <h4 className="text-xl font-semibold text-white mb-4 font-orbitron drop-shadow-md">LinkedIn</h4>
               
-              <div className="flex-1 flex flex-col justify-end">
-                <a
+              <div className="flex-1 flex flex-col">
+                <p className="text-gray-300 text-sm mb-4 font-cabin bg-black/20 rounded-lg p-3 border border-blue-500/10">
+                  {dictionary.contact.linkedin}
+                </p>
+                <Link
                   href="https://linkedin.com/in/mariafernandavillalobos"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -143,7 +147,7 @@ export default function ContactSection({ dictionary }) {
                   aria-label={dictionary.contact.social.linkedin}
                 >
                   {dictionary.contact.social.linkedin}
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -166,8 +170,11 @@ export default function ContactSection({ dictionary }) {
               
               <h4 className="text-xl font-semibold text-white mb-4 font-orbitron drop-shadow-md">GitHub</h4>
               
-              <div className="flex-1 flex flex-col justify-end">
-                <a
+              <div className="flex-1 flex flex-col">
+                <p className="text-gray-300 text-sm mb-4 font-cabin bg-black/20 rounded-lg p-3 border border-purple-500/10">
+                  {dictionary.contact.github}
+                </p>
+                <Link
                   href="https://github.com/MariferVL"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -175,7 +182,7 @@ export default function ContactSection({ dictionary }) {
                   aria-label={dictionary.contact.social.github}
                 >
                   {dictionary.contact.social.github}
-                </a>
+                </Link>
               </div>
             </div>
           </div>

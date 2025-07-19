@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import ProjectsSection from "@/components/ProjectsSecton";
 
 
 export default async function Home({ params }) {
@@ -13,6 +14,7 @@ export default async function Home({ params }) {
     <>
       <HeroSection dictionary={dictionary} lang={lang} />
       <AboutSection dictionary={dictionary} />
+      <ProjectsSection dictionary={dictionary} />
       <ContactSection dictionary={dictionary} />
       <Footer dictionary={dictionary} />
     </>

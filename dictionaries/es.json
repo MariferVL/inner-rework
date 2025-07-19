@@ -61,10 +61,13 @@
     "invitation": "Estoy disponible para nuevos desafíos. Si tienes un proyecto en mente o una oportunidad que se alinee con mi perfil, no dudes en contactarme.",
     "cta": "¿Listo para colaborar?",
     "email": "marifervl.dev@gmail.com",
+    "linkedin": "marifervl",
+    "github": "marifervl",
     "social": {
       "linkedin": "Conecta en LinkedIn",
       "github": "Ve mi GitHub",
-      "copy_email": "Copiar dirección de correo"
+      "copy_email": "Copiar dirección de correo",
+      "copied_email": "¡Copiado al portapapeles!"
     }
   },
   "footer": {

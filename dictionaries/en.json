@@ -41,18 +41,18 @@
       "result": "The project was delivered on time, exceeding expectations, and served as the main information hub for attendees, setting a new standard for the community's websites."
     },
     "project_2": {
-      "name": "Hites - Mobile E-commerce Challenge",
-      "year": 2023,
-      "challenge": "In a 24-hour technical challenge, replicate a desktop product page into a fully responsive, mobile-first version, based solely on a screenshot.",
-      "contribution": "I built the interface from scratch with React, focusing on a flexible layout. In a pre-generative-AI challenge, I took the initiative to extract, edit, and optimize visual assets directly from the production site—a resourceful move that impressed the hiring team.",
-      "result": "A functional and visually faithful landing page that demonstrated my ability to work with speed and proactivity. My solution stood out among other candidates and positioned me as one of the two finalists for the role."
-    },
-    "project_3": {
       "name": "Client Project: Valeria del Real",
       "year": 2024,
       "challenge": "To create the first professional website for a client with decades of experience in therapies but new to the digital world, who provided low-resolution visual assets.",
       "contribution": "I managed the entire project from concept to deployment. I designed and developed the site, paying special attention to optimizing and treating the images to ensure professional performance and aesthetics despite their original quality.",
       "result": "A functional, deployed website that fulfilled the client's vision, serving as a professional platform for her brand and demonstrating my ability to guide non-technical clients through the digitalization process."
+    },
+    "project_3": {
+      "name": "Hites - Mobile E-commerce Challenge",
+      "year": 2023,
+      "challenge": "In a 24-hour technical challenge, replicate a desktop product page into a fully responsive, mobile-first version, based solely on a screenshot.",
+      "contribution": "I built the interface from scratch with React, focusing on a flexible layout. In a pre-generative-AI challenge, I took the initiative to extract, edit, and optimize visual assets directly from the production site—a resourceful move that impressed the hiring team.",
+      "result": "A functional and visually faithful landing page that demonstrated my ability to work with speed and proactivity. My solution stood out among other candidates and positioned me as one of the two finalists for the role."
     }
   },
   "contact": {
@@ -61,10 +61,13 @@
     "invitation": "I am available for new challenges. If you have a project in mind or an opportunity that aligns with my profile, feel free to reach out.",
     "cta": "Ready to collaborate?",
     "email": "marifervl.dev@gmail.com",
+    "linkedin": "marifervl",
+    "github": "marifervl",
     "social": {
       "linkedin": "Connect on LinkedIn",
       "github": "View my GitHub",
-      "copy_email": "Copy email address"
+      "copy_email": "Copy email address",
+      "copied_email": "Copied to clipboard!"
     }
   },
   "footer": {

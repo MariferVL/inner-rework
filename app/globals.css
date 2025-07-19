@@ -34,7 +34,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url('@/public/images/bg.png');
+  background-image: url('/images/bg.png');
   background-size: cover;
   background-position: center;
   z-index: -1;

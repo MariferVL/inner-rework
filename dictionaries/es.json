@@ -33,35 +33,27 @@
     "resultLabel": "El Resultado",
     "demoLabel": "Ver Demo en Vivo",
     "codeLabel": "Ver Código",
-    "projects": {
-      "title": "Proyectos Destacados",
-      "challengeLabel": "El Reto",
-      "contributionLabel": "Mi Contribución",
-      "resultLabel": "El Resultado",
-      "demoLabel": "Ver Demo",
-      "codeLabel": "Ver Código",
-      "info": {
-        "project_1": {
-          "name": "Sitio Web Conferencia PyDay Chile",
-          "year": 2025,
-          "challenge": "Desarrollar la primera SPA de la comunidad Python Chile bajo un plazo de tiempo estricto, requiriendo una integración perfecta con una identidad de marca preexistente y muy restrictiva.",
-          "contribution": "Arquitecté y desarrollé el front-end con Next.js, estableciendo una navegación intuitiva. Introduje además un proceso de documentación formal para alinear a los stakeholders y gestionar eficientemente las dinámicas del equipo.",
-          "result": "La aplicación fue entregada exitosamente en el plazo establecido, sirviendo como el centro de información para los asistentes y estableciendo un nuevo estándar de calidad para los futuros proyectos web de la comunidad."
-        },
-        "project_2": {
-          "name": "Proyecto Cliente: Valeria del Real",
-          "year": 2024,
-          "challenge": "Liderar a una clienta no técnica en su primer proceso de digitalización mediante la creación de su primer sitio web profesional, con la restricción técnica de optimizar imágenes de baja resolución.",
-          "contribution": "Dirigí el ciclo de vida completo del proyecto, desde el concepto hasta el despliegue. Mi foco fue optimizar y procesar los recursos visuales para asegurar una estética profesional sin comprometer el rendimiento del sitio.",
-          "result": "Un sitio web funcional y desplegado que tradujo exitosamente la visión de la clienta en una plataforma digital, demostrando mi habilidad para gestionar la relación y guiar a clientes a través de procesos técnicos."
-        },
-        "project_3": {
-          "name": "Reto Hites - E-commerce Móvil",
-          "year": 2023,
-          "challenge": "Replicar una página de producto de escritorio en una versión mobile-first completamente responsiva en un desafío técnico de 24 horas, usando solo una captura de pantalla como referencia.",
-          "contribution": "Desarrollé la interfaz desde cero con React y un layout mobile-first. Mi ingenio para extraer y optimizar los recursos visuales de producción fue un diferenciador clave destacado por el equipo de contratación.",
-          "result": "Entregué una landing page funcional y de alta fidelidad visual, demostrando un rendimiento excepcional bajo extrema presión. Esta solución me posicionó como una de las dos finalistas para el rol."
-        }
+    "info": {
+      "project_1": {
+        "name": "Sitio Web Conferencia PyDay Chile",
+        "year": 2025,
+        "challenge": "Desarrollar la primera SPA de la comunidad Python Chile bajo un plazo de tiempo estricto, requiriendo una integración perfecta con una identidad de marca preexistente y muy restrictiva.",
+        "contribution": "Arquitecté y desarrollé el front-end con Next.js, estableciendo una navegación intuitiva. Introduje además un proceso de documentación formal para alinear a los stakeholders y gestionar eficientemente las dinámicas del equipo.",
+        "result": "La aplicación fue entregada exitosamente en el plazo establecido, sirviendo como el centro de información para los asistentes y estableciendo un nuevo estándar de calidad para los futuros proyectos web de la comunidad."
+      },
+      "project_2": {
+        "name": "Proyecto Cliente: Valeria del Real",
+        "year": 2024,
+        "challenge": "Liderar a una clienta no técnica en su primer proceso de digitalización mediante la creación de su primer sitio web profesional, con la restricción técnica de optimizar imágenes de baja resolución.",
+        "contribution": "Dirigí el ciclo de vida completo del proyecto, desde el concepto hasta el despliegue. Mi foco fue optimizar y procesar los recursos visuales para asegurar una estética profesional sin comprometer el rendimiento del sitio.",
+        "result": "Un sitio web funcional y desplegado que tradujo exitosamente la visión de la clienta en una plataforma digital, demostrando mi habilidad para gestionar la relación y guiar a clientes a través de procesos técnicos."
+      },
+      "project_3": {
+        "name": "Reto Hites - E-commerce Móvil",
+        "year": 2023,
+        "challenge": "Replicar una página de producto de escritorio en una versión mobile-first completamente responsiva en un desafío técnico de 24 horas, usando solo una captura de pantalla como referencia.",
+        "contribution": "Desarrollé la interfaz desde cero con React y un layout mobile-first. Mi ingenio para extraer y optimizar los recursos visuales de producción fue un diferenciador clave destacado por el equipo de contratación.",
+        "result": "Entregué una landing page funcional y de alta fidelidad visual, demostrando un rendimiento excepcional bajo extrema presión. Esta solución me posicionó como una de las dos finalistas para el rol."
       }
     }
   },

@@ -3,7 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
-import ProjectsSection from "@/components/ProjectsSecton";
+import ProjectsSection from "@/components/ProjectsSection";
 
 
 export default async function Home({ params }) {

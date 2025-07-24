@@ -62,20 +62,6 @@
           "contribution": "Desarrollé la interfaz desde cero con React y un layout mobile-first. Mi ingenio para extraer y optimizar los recursos visuales de producción fue un diferenciador clave destacado por el equipo de contratación.",
           "result": "Entregué una landing page funcional y de alta fidelidad visual, demostrando un rendimiento excepcional bajo extrema presión. Esta solución me posicionó como una de las dos finalistas para el rol."
         }
-      },
-      "project_2": {
-        "name": "Reto Hites - E-commerce Móvil",
-        "year": 2023,
-        "challenge": "En un desafío técnico de 24 horas, replicar una página de producto de escritorio a una versión mobile-first completamente responsiva, basándome únicamente en una captura de pantalla.",
-        "contribution": "Construí la interfaz desde cero con React, enfocándome en un layout flexible. En un desafío pre-IA generativa, tomé la iniciativa de extraer, editar y optimizar los recursos visuales directamente del sitio en producción, un acto de ingenio que impresionó al equipo de contratación.",
-        "result": "Una landing page funcional y visualmente fiel al original, que demostró mi capacidad para trabajar con velocidad y proactividad. Mi solución destacó entre los demás candidatos y me posicionó como una de las dos finalistas para el puesto."
-      },
-      "project_3": {
-        "name": "Proyecto Cliente: Valeria del Real",
-        "year": 2024,
-        "challenge": "Crear el primer sitio web profesional para una clienta con décadas de trayectoria en terapias, pero nueva en el mundo digital, y que contaba con recursos visuales de baja resolución.",
-        "contribution": "Gestioné todo el proyecto, desde la conceptualización hasta el despliegue. Diseñé y desarrollé el sitio, poniendo especial atención en la optimización y tratamiento de las imágenes para asegurar un rendimiento y una estética profesional a pesar de la calidad original.",
-        "result": "Un sitio web funcional y desplegado que cumplió con la visión de la clienta, sirviendo como una plataforma profesional para su marca y demostrando mi habilidad para guiar a clientes no técnicos en el proceso de digitalización."
       }
     }
   },

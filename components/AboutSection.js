@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-// Simple component for tech stack items to keep the main component clean.
+// Simple component for tech stack items.
 const TechItem = ({ name }) => (
   <li className="bg-white/10 border border-white/20 rounded-full px-4 py-1 text-sm font-cabin transition-colors duration-300 hover:bg-white/20 cursor-pointer">
     {name}
@@ -24,7 +24,6 @@ const NeonSeparator = () => (
 
 export default function AboutSection({ dictionary }) {
   return (
-    // The section now has a black background and is a positioning context.
     <section
       id="about"
       className="relative bg-black py-20 md:py-32 overflow-hidden"
@@ -38,7 +37,7 @@ export default function AboutSection({ dictionary }) {
             {/* Animated container for the hologram effect */}
             <div className="relative animate-float-slow">
               <Image
-                src="/images/aboutMe.gif" // The GIF's black background will now blend seamlessly.
+                src="/images/aboutMe.gif" 
                 alt={dictionary.about.image_alt}
                 width={500}
                 height={500}

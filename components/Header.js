@@ -12,7 +12,7 @@ export default async function Header({ lang }) {
       <nav className="p-4 md:px-8 relative">
         <div className="container mx-auto flex items-center justify-between">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:static lg:translate-x-0 lg:translate-y-0">
-            <Link href={`/${lang}#home`}>
+            <Link href={`/${lang}`}>
               <Image
                 src="/images/logo.gif"
                 alt={dictionary.nav.logoAlt}

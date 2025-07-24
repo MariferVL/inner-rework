@@ -31,28 +31,30 @@
     "challengeLabel": "The Challenge",
     "contributionLabel": "My Contribution",
     "resultLabel": "The Result",
-    "demoLabel": "View Live Demo",
+    "demoLabel": "View Demo",
     "codeLabel": "View Code",
-    "project_1": {
-      "name": "PyDay Chile Conference Website",
-      "year": 2025,
-      "challenge": "To develop the first complete Single-Page Application (SPA) for the Python Chile community under a record-time deadline and with the constraint of a pre-existing brand identity.",
-      "contribution": "I architected and developed the application in Next.js, creating an intuitive navigation structure. Additionally, I introduced a formal documentation process to align the volunteer team and successfully navigated complex team dynamics, letting the quality of the technical result speak for itself.",
-      "result": "The project was delivered on time, exceeding expectations, and served as the main information hub for attendees, setting a new standard for the community's websites."
-    },
-    "project_2": {
-      "name": "Client Project: Valeria del Real",
-      "year": 2024,
-      "challenge": "To create the first professional website for a client with decades of experience in therapies but new to the digital world, who provided low-resolution visual assets.",
-      "contribution": "I managed the entire project from concept to deployment. I designed and developed the site, paying special attention to optimizing and treating the images to ensure professional performance and aesthetics despite their original quality.",
-      "result": "A functional, deployed website that fulfilled the client's vision, serving as a professional platform for her brand and demonstrating my ability to guide non-technical clients through the digitalization process."
-    },
-    "project_3": {
-      "name": "Hites - Mobile E-commerce Challenge",
-      "year": 2023,
-      "challenge": "In a 24-hour technical challenge, replicate a desktop product page into a fully responsive, mobile-first version, based solely on a screenshot.",
-      "contribution": "I built the interface from scratch with React, focusing on a flexible layout. In a pre-generative-AI challenge, I took the initiative to extract, edit, and optimize visual assets directly from the production site—a resourceful move that impressed the hiring team.",
-      "result": "A functional and visually faithful landing page that demonstrated my ability to work with speed and proactivity. My solution stood out among other candidates and positioned me as one of the two finalists for the role."
+    "info": {
+      "project_1": {
+        "name": "PyDay Chile Conference Website",
+        "year": 2025,
+        "challenge": "To develop the Python Chile community's first SPA under a tight deadline, requiring seamless integration with a pre-existing and highly restrictive brand identity.",
+        "contribution": "I architected and developed the front-end using Next.js, establishing an intuitive navigation structure. I also introduced a formal documentation process to align stakeholders and efficiently manage team dynamics.",
+        "result": "The application was successfully delivered on schedule, serving as the central information hub for attendees and setting a new quality standard for the community's future web projects."
+      },
+      "project_2": {
+        "name": "Client Project: Valeria del Real",
+        "year": 2024,
+        "challenge": "To lead a non-technical client through her first digitalization process by creating her first professional website, with the key technical constraint of optimizing low-resolution source images.",
+        "contribution": "I led the full project lifecycle from concept to deployment. My focus was on optimizing and processing the visual assets to ensure a professional aesthetic without compromising site performance or design integrity.",
+        "result": "A fully functional and deployed website that successfully translated the client's vision into a digital platform, showcasing my ability to manage client relationships and guide them through technical processes."
+      },
+      "project_3": {
+        "name": "Hites - Mobile E-commerce Challenge",
+        "year": 2023,
+        "challenge": "To replicate a desktop product page into a fully responsive, mobile-first version in a 24-hour, high-pressure technical challenge, using only a single screenshot as a reference.",
+        "contribution": "I developed the interface from scratch using React and a mobile-first layout. My resourcefulness in extracting and optimizing production visual assets was a key differentiator noted by the hiring team.",
+        "result": "Delivered a functional and high-fidelity landing page, demonstrating exceptional performance under extreme time constraints. This solution positioned me as one of the top two finalists for the role."
+      }
     }
   },
   "contact": {

@@ -377,84 +377,110 @@ body {
 
 /* Patrón de cuadrícula para el fondo del terminal */
 .bg-grid-pattern {
-  background-image: 
+  background-image:
     linear-gradient(rgba(0, 180, 255, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 180, 255, 0.1) 1px, transparent 1px);
   background-size: 20px 20px;
 }
 
-/* Gradiente para la animación de la línea de escaneo */
 .bg-scan-line-gradient {
-  background: linear-gradient(
-    to bottom,
-    transparent 0%,
-    rgba(226, 2, 193, 0.1) 48%,
-    rgba(0, 255, 249, 0.3) 50%,
-    rgba(226, 2, 193, 0.1) 52%,
-    transparent 100%
-  );
-  height: 100px; /* Altura de la línea de escaneo */
+  background: linear-gradient(to bottom,
+      transparent 0%,
+      rgba(2, 177, 226, 0.1) 48%,
+      rgba(96, 201, 254, 0.4) 50%,
+      rgba(2, 174, 226, 0.1) 52%,
+      transparent 100%);
+  height: 300px;
 }
 
-/* Heredamos la animación de scan-line que ya tenías */
-.animate-scan-line {
-  animation: scan-line 8s linear infinite;
-}
+@keyframes scan-line-flow {
+  from {
+    transform: translateY(-100px);
+  }
 
-@keyframes scan-line {
-  0% { transform: translateY(-100px); } /* Empieza justo arriba */
-  100% { transform: translateY(100%); } /* Termina justo abajo */
+  to {
+    transform: translateY(calc(100% + 622px));
+  }
 }
 
 
 /* --- Contact Section Styles --- */
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 @keyframes glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(147, 51, 234, 0.3); }
-  50% { box-shadow: 0 0 30px rgba(147, 51, 234, 0.6); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(147, 51, 234, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 30px rgba(147, 51, 234, 0.6);
+  }
 }
 
-@keyframes scan-line {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(100vh); }
-}
 
 @keyframes cyan-pulse-glow {
-  0%, 100% { 
+
+  0%,
+  100% {
     text-shadow: 0 0 10px rgba(79, 172, 254, 0.5),
-                 0 0 20px rgba(79, 172, 254, 0.3),
-                 0 0 30px rgba(79, 172, 254, 0.2);
+      0 0 20px rgba(79, 172, 254, 0.3),
+      0 0 30px rgba(79, 172, 254, 0.2);
   }
-  50% { 
+
+  50% {
     text-shadow: 0 0 20px rgba(79, 172, 254, 0.8),
-                 0 0 30px rgba(79, 172, 254, 0.6),
-                 0 0 40px rgba(79, 172, 254, 0.4);
+      0 0 30px rgba(79, 172, 254, 0.6),
+      0 0 40px rgba(79, 172, 254, 0.4);
   }
 }
 
 @keyframes pink-pulse-glow {
-  0%, 100% { 
+
+  0%,
+  100% {
     text-shadow: 0 0 10px rgba(227, 2, 193, 0.5),
-                 0 0 20px rgba(227, 2, 193, 0.3),
-                 0 0 30px rgba(227, 2, 193, 0.2);
+      0 0 20px rgba(227, 2, 193, 0.3),
+      0 0 30px rgba(227, 2, 193, 0.2);
   }
-  50% { 
+
+  50% {
     text-shadow: 0 0 20px rgba(227, 2, 193, 0.8),
-                 0 0 30px rgba(227, 2, 193, 0.6),
-                 0 0 40px rgba(227, 2, 193, 0.4);
+      0 0 30px rgba(227, 2, 193, 0.6),
+      0 0 40px rgba(227, 2, 193, 0.4);
   }
 }
 
 @keyframes matrix-rain {
-  0% { transform: translateY(-100%); opacity: 0; }
-  10% { opacity: 1; }
-  90% { opacity: 1; }
-  100% { transform: translateY(100vh); opacity: 0; }
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
 }
 
 /* Utility classes */
@@ -467,7 +493,7 @@ body {
 }
 
 .animate-scan-line {
-  animation: scan-line 3s linear infinite;
+  animation: scan-line-flow 8s linear infinite;
 }
 
 .animate-cyan-pulse-glow {
@@ -530,14 +556,18 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .animate-cyan-pulse-glow, .animate-pink-pulse-glow {
+
+  .animate-cyan-pulse-glow,
+  .animate-pink-pulse-glow {
     animation: none;
   }
+
   .cyan-glow {
-    text-shadow: 0 0 10px  rgb(79, 172, 254, 0.5);
+    text-shadow: 0 0 10px rgb(79, 172, 254, 0.5);
   }
+
   .pink-glow {
-    text-shadow: 0 0 10px  rgba(227, 2, 193, 0.5);   
+    text-shadow: 0 0 10px rgba(227, 2, 193, 0.5);
   }
 
 }
@@ -558,6 +588,7 @@ body {
 
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
+
   .animate-float,
   .animate-glow,
   .animate-scan-line,
@@ -566,5 +597,17 @@ body {
   .animate-matrix-rain,
   .animate-pulse {
     animation: none;
+  }
+}
+
+@media (max-width: 640px) {
+  @keyframes scan-line-flow {
+    from {
+      transform: translateY(-100px);
+    }
+
+    to {
+      transform: translateY(calc(100% + 1244px));
+    }
   }
 }

@@ -94,8 +94,8 @@ export default function ProjectsSection({ dictionary }) {
         <Headline text={projectsData.title} />
 
         <div className="w-full p-2 md:p-13 rounded-lg glass-effect border-2 border-cyan-500/30 relative animate-glow overflow-hidden">
-          <div className="absolute inset-0 bg-grid-pattern opacity-30"></div>
-          <div className="absolute inset-0 animate-scan-line bg-scan-line-gradient z-20 pointer-events-none"></div>
+          {/* <div className="absolute inset-0 bg-grid-pattern opacity-30"></div>
+          <div className="absolute inset-0 animate-scan-line bg-scan-line-gradient z-20 pointer-events-none"></div> */}
 
           <AnimatePresence mode="wait">
             <motion.div

@@ -20,16 +20,20 @@ export default function ProjectsSection({ dictionary }) {
         image: "/images/projects/pyday.jpg",
         demo: "https://pyday.cl",
         code: "https://github.com/python-chile/pydaydotcl",
+        technologies: "Javascript, Next.js, Tailwind CSS, Git",
+
       },
       project_2: {
         image: "/images/projects/valeria.jpg",
         demo: "https://valeriadelreal.web.app/",
         code: "https://github.com/MariferVL/valeDelRealWebsite",
+        technologies: "Javascript, Next.js, Tailwind CSS, Firebase",
       },
       project_3: {
         image: "/images/projects/hites.jpg",
         demo: "https://marifervl.github.io/Hites-Website/",
         code: "https://github.com/MariferVL/Hites-Website",
+        technologies: "HTML5, CSS3, JavaScript, Bootstrap",
       },
     };
     return { ...projectsData.info[key], ...localData[key] };
@@ -46,7 +50,7 @@ export default function ProjectsSection({ dictionary }) {
   return (
     <section id="projects" className="py-20 md:py-32">
       <div className="container mx-auto px-4 flex flex-col items-center">
-        <Headline text={projectsData.subtitle} />
+        <Headline text={projectsData.title} />
 
         <div className="w-full p-2 md:p-13 rounded-lg glass-effect border-2 border-cyan-500/30 relative animate-glow overflow-hidden">
           <div className="absolute inset-0 bg-grid-pattern opacity-30"></div>
@@ -68,7 +72,7 @@ export default function ProjectsSection({ dictionary }) {
                     alt={`${activeProject.name} project screenshot`}
                     width={300}
                     height={206}
-                    className="rounded-md opacity-50"
+                    className="rounded-md opacity-70"
                   />
                 </div>
               </div>

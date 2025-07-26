@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Headline from "./ui/Headline";
 
 // Simple component for tech stack items.
 const TechItem = ({ name }) => (
@@ -28,77 +29,81 @@ export default function AboutSection({ dictionary }) {
       id="about"
       className="relative bg-black py-20 md:py-32 overflow-hidden"
     >
-      {/* The main content container is placed on top of the background effect. */}
-      <div className="relative z-10 container mx-auto px-4">
-        {/* Main grid layout. Stacks on mobile, two columns on desktop. */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Image Column */}
-          <div className="flex justify-center items-center">
-            {/* Animated container for the hologram effect */}
-            <div className="relative animate-float-slow">
-              <Image
-                src="/images/aboutMe.gif" 
-                alt={dictionary.about.image_alt}
-                width={500}
-                height={500}
-                className="w-full max-w-sm md:max-w-md"
-              />
-            </div>
-          </div>
-
-          {/* Text Content Column */}
-          <div className="text-white flex flex-col">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-orbitron font-bold text-shadow-glow mb-6">
-                {dictionary.about.title}
-              </h2>
-              <p className="font-cabin text-gray-300 leading-relaxed">
-                Being recognized as the #3 React Developer in Chile is more than
-                a ranking; it&apos;s a driver for my mission to build{" "}
-                <NeonHighlight>technology that feels human</NeonHighlight>. I
-                strive to create interfaces where performance and empathy
-                coexist, ensuring every interaction is both powerful and
-                intuitive.
-              </p>
-              <p className="font-cabin text-gray-300 leading-relaxed mt-4">
-                My background in health sciences taught me to{" "}
-                <NeonHighlight>listen with empathy</NeonHighlight>. Today, I
-                apply that same principle to code, focusing on the &apos;details
-                that matter.&apos; This translates into accessible, user-centric
-                experiences where every pixel has a purpose.
-              </p>
+      <div className="container mx-auto px-4 flex flex-col items-center">
+        <Headline text={dictionary.about.title} />
+        {/* The main content container is placed on top of the background effect. */}
+        <div className="relative z-10 container mx-auto px-4">
+          {/* Main grid layout. Stacks on mobile, two columns on desktop. */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Image Column */}
+            <div className="flex justify-center items-center">
+              {/* Animated container for the hologram effect */}
+              <div className="relative animate-float-slow">
+                <Image
+                  src="/images/aboutMe.gif"
+                  alt={dictionary.about.image_alt}
+                  width={500}
+                  height={500}
+                  className="w-full max-w-sm md:max-w-md"
+                />
+              </div>
             </div>
 
-            <NeonSeparator />
+            {/* Text Content Column */}
+            <div className="text-white flex flex-col">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-orbitron font-bold text-shadow-glow mb-6">
+                  {dictionary.about.title}
+                </h2>
+                <p className="font-cabin text-gray-300 leading-relaxed">
+                  Being recognized as the #3 React Developer in Chile is more
+                  than a ranking; it&apos;s a driver for my mission to build{" "}
+                  <NeonHighlight>technology that feels human</NeonHighlight>. I
+                  strive to create interfaces where performance and empathy
+                  coexist, ensuring every interaction is both powerful and
+                  intuitive.
+                </p>
+                <p className="font-cabin text-gray-300 leading-relaxed mt-4">
+                  My background in health sciences taught me to{" "}
+                  <NeonHighlight>listen with empathy</NeonHighlight>. Today, I
+                  apply that same principle to code, focusing on the
+                  &apos;details that matter.&apos; This translates into
+                  accessible, user-centric experiences where every pixel has a
+                  purpose.
+                </p>
+              </div>
 
-            {/* Section for Tech Stack */}
-            <div>
-              <h3
-                className="font-orbitron text-2xl font-semibold text-[#65e1ff] mb-4"
-                style={{ textShadow: "0 0 10px rgba(101, 225, 255, 0.5)" }}
-              >
-                {dictionary.about.tech_stack_title}
-              </h3>
-              <ul className="flex flex-wrap gap-3">
-                <TechItem name="JavaScript" />
-                <TechItem name="React" />
-                <TechItem name="Next.js" />
-              </ul>
-            </div>
+              <NeonSeparator />
 
-            <NeonSeparator />
+              {/* Section for Tech Stack */}
+              <div>
+                <h3
+                  className="font-orbitron text-2xl font-semibold text-[#65e1ff] mb-4"
+                  style={{ textShadow: "0 0 10px rgba(101, 225, 255, 0.5)" }}
+                >
+                  {dictionary.about.tech_stack_title}
+                </h3>
+                <ul className="flex flex-wrap gap-3">
+                  <TechItem name="JavaScript" />
+                  <TechItem name="React" />
+                  <TechItem name="Next.js" />
+                </ul>
+              </div>
 
-            {/* Section for Ideal Team */}
-            <div>
-              <h3
-                className="font-orbitron text-2xl font-semibold text-[#65e1ff] mb-4"
-                style={{ textShadow: "0 0 10px rgba(101, 225, 255, 0.5)" }}
-              >
-                {dictionary.about.ideal_team_title}
-              </h3>
-              <p className="font-cabin text-gray-300 leading-relaxed">
-                {dictionary.about.ideal_team_paragraph}
-              </p>
+              <NeonSeparator />
+
+              {/* Section for Ideal Team */}
+              <div>
+                <h3
+                  className="font-orbitron text-2xl font-semibold text-[#65e1ff] mb-4"
+                  style={{ textShadow: "0 0 10px rgba(101, 225, 255, 0.5)" }}
+                >
+                  {dictionary.about.ideal_team_title}
+                </h3>
+                <p className="font-cabin text-gray-300 leading-relaxed">
+                  {dictionary.about.ideal_team_paragraph}
+                </p>
+              </div>
             </div>
           </div>
         </div>

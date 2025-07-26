@@ -3,7 +3,14 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaEnvelope, FaLinkedin, FaGithub, FaCheck, FaCopy, FaExternalLinkAlt } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaLinkedin,
+  FaGithub,
+  FaCheck,
+  FaCopy,
+  FaExternalLinkAlt,
+} from "react-icons/fa";
 import Headline from "./ui/Headline";
 
 export default function ContactSection({ dictionary }) {
@@ -13,21 +20,24 @@ export default function ContactSection({ dictionary }) {
   const contactData = {
     email: {
       icon: FaEnvelope,
-      label: dictionary.contact.social.copy_email,
+      title: "EMAIL ADDRESS", // Título para el panel
       value: dictionary.contact.email,
+      actionLabel: dictionary.contact.social.copy_email,
       action: "copy",
     },
     linkedin: {
       icon: FaLinkedin,
-      label: dictionary.contact.social.linkedin,
-      value: "marifervl",
+      title: "LINKEDIN PROFILE", // Título para el panel
+      value: "linkedin.com/in/mariafernandavillalobos",
+      actionLabel: dictionary.contact.social.linkedin,
       action: "link",
-      href: "https://linkedin.com/in/marifervl",
+      href: "https://linkedin.com/in/mariafernandavillalobos",
     },
     github: {
       icon: FaGithub,
-      label: dictionary.contact.social.github,
-      value: "marifervl",
+      title: "GITHUB REPOSITORY", // Título para el panel
+      value: "github.com/MariferVL",
+      actionLabel: dictionary.contact.social.github,
       action: "link",
       href: "https://github.com/MariferVL",
     },
@@ -42,7 +52,10 @@ export default function ContactSection({ dictionary }) {
   const currentData = contactData[activeMethod];
 
   return (
-    <section id="contact" className="relative min-h-screen flex items-center justify-center py-20 px-4 overflow-hidden">
+    <section
+      id="contact"
+      className="relative min-h-screen flex items-center justify-center py-20 px-4 overflow-hidden"
+    >
       {/* Fondo decorativo con partículas */}
       <div className="absolute inset-0 z-0 bg-black">
         <div className="absolute inset-0 bg-grid-pattern-contact opacity-10"></div>
@@ -76,27 +89,38 @@ export default function ContactSection({ dictionary }) {
                   animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
                   exit={{ opacity: 0, scale: 0.8, filter: "blur(10px)" }}
                   transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
-                  className="flex flex-col items-center justify-center text-center h-full"
+                  className="data-panel"
                 >
-                  <p className="font-mono text-lg text-white break-all mb-6 px-4">
-                    {currentData.value}
-                  </p>
+                  <h4 className="data-panel-title">{currentData.title}</h4>
+                  <p className="data-panel-value">{currentData.value}</p>
+                  <div className="data-panel-divider"></div>
+
                   {currentData.action === "copy" ? (
-                    <button onClick={handleCopyEmail} className="holographic-action-btn">
+                    <button
+                      onClick={handleCopyEmail}
+                      className="data-panel-action-btn"
+                    >
                       {emailCopied ? (
                         <>
                           <FaCheck className="text-green-400" />
-                          <span className="text-green-300">{dictionary.contact.social.copied_email}</span>
+                          <span className="text-green-300">
+                            {dictionary.contact.social.copied_email}
+                          </span>
                         </>
                       ) : (
                         <>
-                          <FaCopy /> <span>{currentData.label}</span>
+                          <FaCopy /> <span>{currentData.actionLabel}</span>
                         </>
                       )}
                     </button>
                   ) : (
-                    <Link href={currentData.href} target="_blank" rel="noopener noreferrer" className="holographic-action-btn">
-                      <FaExternalLinkAlt /> <span>{currentData.label}</span>
+                    <Link
+                      href={currentData.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="data-panel-action-btn"
+                    >
+                      <span>{currentData.actionLabel}</span>
                     </Link>
                   )}
                 </motion.div>
@@ -109,7 +133,9 @@ export default function ContactSection({ dictionary }) {
               return (
                 <button
                   key={key}
-                  className={`orbiting-icon icon-pos-${index + 1} ${activeMethod === key ? "active" : ""}`}
+                  className={`orbiting-icon icon-pos-${index + 1} ${
+                    activeMethod === key ? "active" : ""
+                  }`}
                   onClick={() => setActiveMethod(key)}
                 >
                   <Icon className="w-8 h-8" />

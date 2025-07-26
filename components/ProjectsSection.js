@@ -21,7 +21,6 @@ export default function ProjectsSection({ dictionary }) {
         demo: "https://pyday.cl",
         code: "https://github.com/python-chile/pydaydotcl",
         technologies: "Javascript, Next.js, Tailwind CSS, Git",
-
       },
       project_2: {
         image: "/images/projects/valeria.jpg",
@@ -63,64 +62,67 @@ export default function ProjectsSection({ dictionary }) {
               animate={{ opacity: 1, filter: "blur(0px)" }}
               exit={{ opacity: 0, filter: "blur(10px)" }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
-              className="relative z-10 grid grid-cols-1 md:grid-cols-5 gap-6 p-4"
+              className="relative z-10 p-4"
             >
-              <div className="md:col-span-2">
-                <div className="md:pt-8 md:pr-4 overflow-hidden">
-                  <Image
-                    src={activeProject.image}
-                    alt={`${activeProject.name} project screenshot`}
-                    width={300}
-                    height={206}
-                    className="rounded-md opacity-70"
-                  />
-                </div>
-              </div>
+              <h3 className="font-orbitron text-2xl text-pink-400 mb-11 text-center animate-pink-pulse-glow pink-glow">
+                {activeProject.name}
+              </h3>
 
-              <div className="md:col-span-3 flex flex-col md:ml-16">
-                <h3 className="font-orbitron text-2xl text-pink-400 mb-4 animate-pink-pulse-glow pink-glow">
-                  {activeProject.name}
-                </h3>
-                <div>
-                  <h4 className="font-orbitron text-lg text-cyan-300 md:mt-8 mb-1 animate-cyan-pulse-glow cyan-glow ">
-                    {projectsData.challengeLabel}
-                  </h4>
-                  <p className="font-cabin text-gray-300 mb-4 md:mt-4 md:px-11 md:text-justify">
-                    {activeProject.challenge}
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-orbitron text-lg text-cyan-300 md:mt-8 mb-1 animate-cyan-pulse-glow cyan-glow ">
-                    {projectsData.contributionLabel}
-                  </h4>
-                  <p className="font-cabin text-gray-300 mb-4 md:mt-4 md:px-11 md:text-justify">
-                    {activeProject.contribution}
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-orbitron text-lg text-cyan-300 md:mt-8 mb-1 animate-cyan-pulse-glow cyan-glow ">
-                    {projectsData.resultLabel}
-                  </h4>
-                  <p className="font-cabin text-gray-300 mb-4 md:mt-4 md:px-11 md:text-justify">
-                    {activeProject.result}
-                  </p>
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+                <div className="md:col-span-2 flex justify-center md:justify-end">
+                  <div className="overflow-hidden">
+                    <Image
+                      src={activeProject.image}
+                      alt={`${activeProject.name} project screenshot`}
+                      width={300}
+                      height={206}
+                      className="rounded-md opacity-70"
+                    />
+                  </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 mt-auto pt-4">
-                  <Button
-                    href={activeProject.demo}
-                    color="#06b6d4"
-                    className="!px-6 !py-2.5"
-                  >
-                    <FaExternalLinkAlt /> {projectsData.demoLabel}
-                  </Button>
-                  <Button
-                    href={activeProject.code}
-                    color="#ffffff"
-                    className="!px-6 !py-2.5"
-                  >
-                    <FaGithub /> {projectsData.codeLabel}
-                  </Button>
+                <div className="md:col-span-3 flex flex-col md:ml-22">
+                  <div>
+                    <h4 className="font-orbitron text-lg text-cyan-300 md:mt-8 mb-1 animate-cyan-pulse-glow cyan-glow ">
+                      {projectsData.challengeLabel}
+                    </h4>
+                    <p className="font-cabin text-gray-300 mb-4 md:mt-4 md:px-11 md:text-justify">
+                      {activeProject.challenge}
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-orbitron text-lg text-cyan-300 md:mt-8 mb-1 animate-cyan-pulse-glow cyan-glow ">
+                      {projectsData.contributionLabel}
+                    </h4>
+                    <p className="font-cabin text-gray-300 mb-4 md:mt-4 md:px-11 md:text-justify">
+                      {activeProject.contribution}
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-orbitron text-lg text-cyan-300 md:mt-8 mb-1 animate-cyan-pulse-glow cyan-glow ">
+                      {projectsData.resultLabel}
+                    </h4>
+                    <p className="font-cabin text-gray-300 mb-4 md:mt-4 md:px-11 md:text-justify">
+                      {activeProject.result}
+                    </p>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row sm:justify-center gap-4 mt-auto pt-4">
+                    <Button
+                      href={activeProject.demo}
+                      color="#06b6d4"
+                      className="!px-6 !py-2.5"
+                    >
+                      <FaExternalLinkAlt /> {projectsData.demoLabel}
+                    </Button>
+                    <Button
+                      href={activeProject.code}
+                      color="#ffffff"
+                      className="!px-6 !py-2.5"
+                    >
+                      <FaGithub /> {projectsData.codeLabel}
+                    </Button>
+                  </div>
                 </div>
               </div>
             </motion.div>

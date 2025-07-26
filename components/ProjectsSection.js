@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
@@ -13,6 +13,7 @@ export default function ProjectsSection({ dictionary }) {
   }
 
   const projectsData = dictionary.projects;
+  const projectCardRef = useRef(null);
 
   const projectsList = Object.keys(projectsData.info).map((key) => {
     const localData = {
@@ -20,19 +21,19 @@ export default function ProjectsSection({ dictionary }) {
         image: "/images/projects/pyday.jpg",
         demo: "https://pyday.cl",
         code: "https://github.com/python-chile/pydaydotcl",
-        technologies: "Javascript, Next.js, Tailwind CSS, Git",
+        technologies: "Javascript, Next.js, Tailwind CSS, Git, Framer Motion",
       },
       project_2: {
         image: "/images/projects/valeria.jpg",
         demo: "https://valeriadelreal.web.app/",
         code: "https://github.com/MariferVL/valeDelRealWebsite",
-        technologies: "Javascript, Next.js, Tailwind CSS, Firebase",
+        technologies: "Javascript, Next.js, Tailwind CSS, Firebase, Vercel",
       },
       project_3: {
         image: "/images/projects/hites.jpg",
         demo: "https://marifervl.github.io/Hites-Website/",
         code: "https://github.com/MariferVL/Hites-Website",
-        technologies: "HTML5, CSS3, JavaScript, Bootstrap",
+        technologies: "HTML5, CSS3, JavaScript, Bootstrap, GitHub Pages",
       },
     };
     return { ...projectsData.info[key], ...localData[key] };
@@ -46,9 +47,50 @@ export default function ProjectsSection({ dictionary }) {
 
   const activeProject = projectsList[activeIndex];
 
+  const handleProjectChange = (index) => {
+    setActiveIndex(index);
+    projectCardRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
+  const TechMarquee = ({ technologies }) => {
+    const techArray = technologies.split(", ").map((t) => t.trim());
+    const doubledTechs = [...techArray, ...techArray];
+
+    return (
+      <div className="w-full overflow-hidden whitespace-nowrap py-4 border-t border-b border-cyan-500/20 my-6">
+        <motion.div
+          className="flex"
+          animate={{
+            x: ["0%", "-100%"],
+          }}
+          transition={{
+            ease: "linear",
+            duration: 15,
+            repeat: Infinity,
+          }}
+        >
+          {doubledTechs.map((tech, index) => (
+            <span
+              key={index}
+              className="font-mono text-cyan-300/80 text-sm px-6"
+            >
+              {tech}
+            </span>
+          ))}
+        </motion.div>
+      </div>
+    );
+  };
+
   return (
     <section id="projects" className="py-20 md:py-32">
-      <div className="container mx-auto px-4 flex flex-col items-center">
+      <div
+        className="container mx-auto px-4 flex flex-col items-center"
+        ref={projectCardRef}
+      >
         <Headline text={projectsData.title} />
 
         <div className="w-full p-2 md:p-13 rounded-lg glass-effect border-2 border-cyan-500/30 relative animate-glow overflow-hidden">
@@ -82,6 +124,7 @@ export default function ProjectsSection({ dictionary }) {
                 </div>
 
                 <div className="md:col-span-3 flex flex-col md:ml-22">
+                  {/* ... (resto del contenido de la descripción) ... */}
                   <div>
                     <h4 className="font-orbitron text-lg text-cyan-300 md:mt-8 mb-1 animate-cyan-pulse-glow cyan-glow ">
                       {projectsData.challengeLabel}
@@ -107,6 +150,8 @@ export default function ProjectsSection({ dictionary }) {
                     </p>
                   </div>
 
+                  <TechMarquee technologies={activeProject.technologies} />
+
                   <div className="flex flex-col sm:flex-row sm:justify-center gap-4 mt-auto pt-4">
                     <Button
                       href={activeProject.demo}
@@ -131,9 +176,10 @@ export default function ProjectsSection({ dictionary }) {
 
         <div className="flex justify-center gap-4 mt-8">
           {projectsList.map((project, index) => (
+            // 👇 4. Usa la nueva función en el onClick
             <button
               key={project.name}
-              onClick={() => setActiveIndex(index)}
+              onClick={() => handleProjectChange(index)}
               className={`font-orbitron px-4 py-2 rounded-md transition-all duration-300 border-2 ${
                 activeIndex === index
                   ? "bg-pink-500/40 border-pink-500 text-white animate-pulse"

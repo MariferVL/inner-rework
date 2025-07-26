@@ -462,7 +462,6 @@ body {
   animation: text-flicker 3s linear infinite;
 }
 
-
 .data-panel-value {
   font-family: var(--font-mono);
   font-size: 1.1rem;
@@ -473,7 +472,6 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/* Línea divisoria decorativa */
 .data-panel-divider {
   width: 60%;
   height: 1px;
@@ -481,12 +479,12 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/* Botón de acción rediseñado */
 .data-panel-action-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  padding: 0.6rem 1.2rem;
+  padding: 0.6rem 0.7rem;
+  margin-inline: 2.2rem;
   background-color: transparent;
   border: 1px solid rgba(0, 183, 255, 0.4);
   color: #66cbfb;
@@ -502,8 +500,9 @@ body {
 .data-panel-action-btn:hover {
   background-color: #66cbfb;
   color: #0a0a0a;
+  font-weight:900;
   box-shadow: 0 0 20px #66cbfb;
-  transform: scale(1.05);
+  transform: scale(1.11);
 }
 
 /* Animación de parpadeo para el texto */
@@ -614,4 +613,3 @@ body {
     font-size: 3rem;
   }
 }
-

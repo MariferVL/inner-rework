@@ -92,23 +92,25 @@ export default function ContactSection({ dictionary }) {
                   <h4 className="data-panel-title">{currentData.title}</h4>
                   <p className="data-panel-value">{currentData.value}</p>
                   <div className="data-panel-divider"></div>
-
                   {currentData.action === "copy" ? (
                     <Button
                       onClick={handleCopyEmail}
-                      unstyled={true} // <-- Le decimos que no use sus estilos base
-                      className="data-panel-action-btn" // <-- Le pasamos nuestros estilos personalizados
+                      unstyled={true}
+                      className="data-panel-action-btn"
                     >
                       {emailCopied ? (
                         <>
-                          <FaCheck className="text-green-400" />
-                          <span className="text-green-300">
+                          <FaCheck className="inline-flex md:hidden text-cyan-400" />
+                          <span className="hidden md:inline-flex text-cyan-300">
                             {dictionary.contact.social.copied_email}
                           </span>
                         </>
                       ) : (
                         <>
-                          <FaCopy /> <span>{currentData.actionLabel}</span>
+                          <FaCopy className="inline-flex md:hidden" />
+                          <span className="hidden md:inline-flex">
+                            {currentData.actionLabel}
+                          </span>
                         </>
                       )}
                     </Button>
@@ -117,11 +119,15 @@ export default function ContactSection({ dictionary }) {
                       href={currentData.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      unstyled={true} 
+                      unstyled={true}
                       className="data-panel-action-btn"
                     >
-                      <FaExternalLinkAlt className="md:hidden" />
-                      <span>{currentData.actionLabel}</span>
+                      {/* Ícono de Link Externo (solo visible en móvil) */}
+                      <FaExternalLinkAlt className="inline-flex md:hidden" />
+                      {/* Texto del Link (solo visible en desktop) */}
+                      <span className="hidden md:inline-flex">
+                        {currentData.actionLabel}
+                      </span>
                     </Button>
                   )}
                 </motion.div>

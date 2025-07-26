@@ -12,6 +12,7 @@ import {
   FaExternalLinkAlt,
 } from "react-icons/fa";
 import Headline from "./ui/Headline";
+import Button from "./ui/Button";
 
 export default function ContactSection({ dictionary }) {
   const [activeMethod, setActiveMethod] = useState("email");
@@ -20,22 +21,22 @@ export default function ContactSection({ dictionary }) {
   const contactData = {
     email: {
       icon: FaEnvelope,
-      title: "EMAIL ADDRESS", // Título para el panel
+      title: dictionary.contact.emailLabel || "EMAIL ADDRESS",
       value: dictionary.contact.email,
       actionLabel: dictionary.contact.social.copy_email,
       action: "copy",
     },
     linkedin: {
       icon: FaLinkedin,
-      title: "LINKEDIN PROFILE", // Título para el panel
-      value: "linkedin.com/in/mariafernandavillalobos",
+      title: dictionary.contact.linkedinLabel || "LINKEDIN PROFILE",
+      value: "linkedin.com/in/marifervl",
       actionLabel: dictionary.contact.social.linkedin,
       action: "link",
-      href: "https://linkedin.com/in/mariafernandavillalobos",
+      href: "https://linkedin.com/in/marifervl",
     },
     github: {
       icon: FaGithub,
-      title: "GITHUB REPOSITORY", // Título para el panel
+      title: dictionary.contact.githubLabel || "GITHUB REPOSITORY",
       value: "github.com/MariferVL",
       actionLabel: dictionary.contact.social.github,
       action: "link",
@@ -56,10 +57,8 @@ export default function ContactSection({ dictionary }) {
       id="contact"
       className="relative min-h-screen flex items-center justify-center py-20 px-4 overflow-hidden"
     >
-      {/* Fondo decorativo con partículas */}
       <div className="absolute inset-0 z-0 bg-black">
         <div className="absolute inset-0 bg-grid-pattern-contact opacity-10"></div>
-        {/* Aquí podrías añadir un componente de partículas si lo deseas */}
       </div>
 
       <div className="relative z-10 container mx-auto">
@@ -79,7 +78,6 @@ export default function ContactSection({ dictionary }) {
             </p>
           </div>
 
-          {/* Columna Derecha: Nodo de Datos Holográfico */}
           <div className="holographic-node-container">
             <div className="holographic-node-core">
               <AnimatePresence mode="wait">
@@ -96,9 +94,10 @@ export default function ContactSection({ dictionary }) {
                   <div className="data-panel-divider"></div>
 
                   {currentData.action === "copy" ? (
-                    <button
+                    <Button
                       onClick={handleCopyEmail}
-                      className="data-panel-action-btn"
+                      unstyled={true} // <-- Le decimos que no use sus estilos base
+                      className="data-panel-action-btn" // <-- Le pasamos nuestros estilos personalizados
                     >
                       {emailCopied ? (
                         <>
@@ -112,16 +111,18 @@ export default function ContactSection({ dictionary }) {
                           <FaCopy /> <span>{currentData.actionLabel}</span>
                         </>
                       )}
-                    </button>
+                    </Button>
                   ) : (
-                    <Link
+                    <Button
                       href={currentData.href}
                       target="_blank"
                       rel="noopener noreferrer"
+                      unstyled={true} 
                       className="data-panel-action-btn"
                     >
+                      <FaExternalLinkAlt className="md:hidden" />
                       <span>{currentData.actionLabel}</span>
-                    </Link>
+                    </Button>
                   )}
                 </motion.div>
               </AnimatePresence>

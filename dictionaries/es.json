@@ -62,8 +62,11 @@
     "subtitle": "Construyamos Algo Increíble Juntos",
     "invitation": "Estoy disponible para nuevos desafíos. Si tienes un proyecto en mente o una oportunidad que se alinee con mi perfil, no dudes en contactarme.",
     "cta": "¿Listo para colaborar?",
+    "emailLabel": "CORREO ELECTRÓNICO",
     "email": "marifervl.dev@gmail.com",
+    "linkedinLabel": "PERFIL DE LINKEDIN",
     "linkedin": "marifervl",
+    "githubLabel": "REPOSITORIO DE GITHUB",   
     "github": "marifervl",
     "social": {
       "linkedin": "Conecta en LinkedIn",

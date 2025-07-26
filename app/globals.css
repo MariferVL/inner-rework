@@ -424,7 +424,7 @@ body {
   100% { transform: translateY(100vh); }
 }
 
-@keyframes pulse-glow {
+@keyframes cyan-pulse-glow {
   0%, 100% { 
     text-shadow: 0 0 10px rgba(79, 172, 254, 0.5),
                  0 0 20px rgba(79, 172, 254, 0.3),
@@ -434,6 +434,19 @@ body {
     text-shadow: 0 0 20px rgba(79, 172, 254, 0.8),
                  0 0 30px rgba(79, 172, 254, 0.6),
                  0 0 40px rgba(79, 172, 254, 0.4);
+  }
+}
+
+@keyframes pink-pulse-glow {
+  0%, 100% { 
+    text-shadow: 0 0 10px rgba(227, 2, 193, 0.5),
+                 0 0 20px rgba(227, 2, 193, 0.3),
+                 0 0 30px rgba(227, 2, 193, 0.2);
+  }
+  50% { 
+    text-shadow: 0 0 20px rgba(227, 2, 193, 0.8),
+                 0 0 30px rgba(227, 2, 193, 0.6),
+                 0 0 40px rgba(227, 2, 193, 0.4);
   }
 }
 
@@ -457,8 +470,12 @@ body {
   animation: scan-line 3s linear infinite;
 }
 
-.animate-pulse-glow {
-  animation: pulse-glow 2s ease-in-out infinite;
+.animate-cyan-pulse-glow {
+  animation: cyan-pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-pink-pulse-glow {
+  animation: pink-pulse-glow 2s ease-in-out infinite;
 }
 
 .animate-matrix-rain {
@@ -513,10 +530,16 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .animate-pulse-glow {
+  .animate-cyan-pulse-glow, .animate-pink-pulse-glow {
     animation: none;
-    text-shadow: 0 0 10px rgba(79, 172, 254, 0.5);
   }
+  .cyan-glow {
+    text-shadow: 0 0 10px  rgb(79, 172, 254, 0.5);
+  }
+  .pink-glow {
+    text-shadow: 0 0 10px  rgba(227, 2, 193, 0.5);   
+  }
+
 }
 
 /* Focus indicators for accessibility */
@@ -538,7 +561,8 @@ body {
   .animate-float,
   .animate-glow,
   .animate-scan-line,
-  .animate-pulse-glow,
+  .animate-cyan-pulse-glow,
+  .animate-pink-pulse-glow,
   .animate-matrix-rain,
   .animate-pulse {
     animation: none;

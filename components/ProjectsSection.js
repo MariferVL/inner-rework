@@ -8,12 +8,14 @@ import Button from "./ui/Button";
 import Headline from "./ui/Headline";
 
 export default function ProjectsSection({ dictionary }) {
+  const projectCardRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
   if (!dictionary || !dictionary.projects || !dictionary.projects.info) {
     return null;
   }
 
   const projectsData = dictionary.projects;
-  const projectCardRef = useRef(null);
 
   const projectsList = Object.keys(projectsData.info).map((key) => {
     const localData = {
@@ -38,8 +40,6 @@ export default function ProjectsSection({ dictionary }) {
     };
     return { ...projectsData.info[key], ...localData[key] };
   });
-
-  const [activeIndex, setActiveIndex] = useState(0);
 
   if (projectsList.length === 0) {
     return null;

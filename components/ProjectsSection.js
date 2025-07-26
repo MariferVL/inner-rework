@@ -87,16 +87,14 @@ export default function ProjectsSection({ dictionary }) {
 
   return (
     <section id="projects" className="py-20 md:py-32">
-      <div
-        className="container mx-auto px-4 flex flex-col items-center"
-        ref={projectCardRef}
-      >
-        <Headline text={projectsData.title} />
-
-        <div className="w-full p-2 md:p-13 rounded-lg glass-effect border-2 border-cyan-500/30 relative animate-glow overflow-hidden">
-          {/* <div className="absolute inset-0 bg-grid-pattern opacity-30"></div>
+      <div className="w-full p-2 md:p-13 rounded-lg glass-effect border-2 border-cyan-500/30 relative animate-glow overflow-hidden">
+        {/* <div className="absolute inset-0 bg-grid-pattern opacity-30"></div>
           <div className="absolute inset-0 animate-scan-line bg-scan-line-gradient z-20 pointer-events-none"></div> */}
-
+        <div
+          className="container mx-auto px-4 flex flex-col items-center"
+          ref={projectCardRef}
+        >
+          <Headline text={projectsData.title} />
           <AnimatePresence mode="wait">
             <motion.div
               key={activeIndex}
@@ -124,7 +122,6 @@ export default function ProjectsSection({ dictionary }) {
                 </div>
 
                 <div className="md:col-span-3 flex flex-col md:ml-22">
-                  {/* ... (resto del contenido de la descripción) ... */}
                   <div>
                     <h4 className="font-orbitron text-lg text-cyan-300 md:mt-8 mb-1 animate-cyan-pulse-glow cyan-glow ">
                       {projectsData.challengeLabel}
@@ -176,7 +173,6 @@ export default function ProjectsSection({ dictionary }) {
 
         <div className="flex justify-center gap-4 mt-8">
           {projectsList.map((project, index) => (
-            // 👇 4. Usa la nueva función en el onClick
             <button
               key={project.name}
               onClick={() => handleProjectChange(index)}

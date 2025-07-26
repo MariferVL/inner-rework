@@ -375,7 +375,6 @@ body {
 
 /* --- Projects Section Styles --- */
 
-/* Patrón de cuadrícula para el fondo del terminal */
 .bg-grid-pattern {
   background-image:
     linear-gradient(rgba(0, 180, 255, 0.1) 1px, transparent 1px),
@@ -402,6 +401,56 @@ body {
     transform: translateY(calc(100% + 622px));
   }
 }
+
+/* Utility classes */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.animate-scan-line {
+  animation: scan-line-flow 8s linear infinite;
+}
+
+.animate-cyan-pulse-glow {
+  animation: cyan-pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-pink-pulse-glow {
+  animation: pink-pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-matrix-rain {
+  animation: matrix-rain 8s linear infinite;
+}
+
+/* Animation delays */
+.animation-delay-500 {
+  animation-delay: 0.5s;
+}
+
+.animation-delay-1000 {
+  animation-delay: 1s;
+}
+
+.animation-delay-1500 {
+  animation-delay: 1.5s;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+/* Glassmorphism effect */
+.glass-effect {
+  background: rgba(10, 10, 10, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 
 
 /* --- Contact Section Styles --- */
@@ -500,7 +549,7 @@ body {
 .data-panel-action-btn:hover {
   background-color: #66cbfb;
   color: #0a0a0a;
-  font-weight:900;
+  font-weight: 900;
   box-shadow: 0 0 20px #66cbfb;
   transform: scale(1.11);
 }

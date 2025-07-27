@@ -16,7 +16,6 @@ The entire site features a clean, futuristic aesthetic with smooth animations an
 -   **Component-Based Architecture**: A clean and organized structure with reusable components for UI elements and sections.
 -   **Smooth Animations**: Engaging user experience with animations powered by `Framer Motion`.
 -   **Fully Responsive Design**: Looks great on all devices, from mobile phones to desktops.
--   **Custom Hooks**: Features custom hooks like `useTypeText` for a dynamic typing effect on headlines.
 -   **Optimized for Performance**: Fast load times and optimized builds, thanks to Next.js features and Turbopack.
 
 ## 🛠️ Tech Stack
@@ -61,8 +60,8 @@ Make sure you have Node.js (v18 or later) and npm installed on your machine.
 
 1.  **Clone the repository:**
     ```sh
-    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-    cd your-repo-name
+    git clone https://github.com/MariferVL/inner-rework.git
+    cd inner-rework
     ```
     2.  **Install dependencies:**
     ```sh

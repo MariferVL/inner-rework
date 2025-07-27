@@ -18,10 +18,10 @@
     "mission": "Apasionada por el Diseño Inclusivo y la creación de experiencias web accesibles. Transformo problemas complejos en soluciones de software fluidas, eficientes e intuitivas."
   },
   "about": {
-    "title": "Mi Filosofía",
+    "title": "Sobre Mí",
     "image_alt": "Holograma de María-Fernanda proyectado desde un teléfono móvil.",
-    "paragraph_1": "Ser reconocida como la tercera desarrolladora de React en Chile es más que un ranking; es el motor de mi misión de construir tecnología que se sienta humana. Me esfuerzo por crear interfaces donde el rendimiento y la empatía coexistan, asegurando que cada interacción sea tan poderosa como intuitiva.",
-    "paragraph_2": "Mi formación en ciencias de la salud me enseñó a escuchar con empatía. Hoy aplico ese mismo principio al código, enfocándome en los «detalles que importan». Esto se traduce en experiencias accesibles y centradas en el usuario, donde cada píxel tiene un propósito.",
+    "paragraph_1": "Mi viaje empezó en las ciencias de la salud, decodificando las necesidades humanas. Hoy, decodifico el mundo digital, construyendo tecnología que se siente intuitiva y humana. Esta fusión única de empatía y código me llevó a ser reconocida como la #3 React Developer en Chile por GitHunter.",
+    "paragraph_2": "Mi filosofía de desarrollo se basa en la precisión y la inclusión. Construyo interfaces pixel-perfect y optimizo la velocidad porque creo que cada milisegundo cuenta. Pero mi verdadera pasión es construir una web más accesible, asegurando que el futuro digital que estamos programando hoy esté abierto para todos.",
     "tech_stack_title": "Tecnologías principales:",
     "ideal_team_title": "Mi entorno ideal:",
     "ideal_team_paragraph": "Me desenvuelvo en equipos colaborativos que valoran la resolución creativa de problemas y sienten pasión por construir productos que marcan una verdadera diferencia."
@@ -66,7 +66,7 @@
     "email": "marifervl.dev@gmail.com",
     "linkedinLabel": "PERFIL DE LINKEDIN",
     "linkedin": "marifervl",
-    "githubLabel": "REPOSITORIO DE GITHUB",   
+    "githubLabel": "REPOSITORIO DE GITHUB",
     "github": "marifervl",
     "social": {
       "linkedin": "Conecta en LinkedIn",

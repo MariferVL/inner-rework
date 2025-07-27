@@ -16,13 +16,13 @@ export default function LanguageSwitcher() {
 
   const handleLanguageChange = (e) => {
     const newCheckedState = e.target.checked;
-
-
     setIsChecked(newCheckedState);
 
     const newLocale = newCheckedState ? 'en' : 'es';
     const newPath = `/${newLocale}${pathname.substring(3) || '/'}`;
-    router.push(newPath);
+
+    // Update the URL without scrolling to the top
+    router.push(newPath, { scroll: false });
   };
 
   return (

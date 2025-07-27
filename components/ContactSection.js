@@ -66,7 +66,7 @@ export default function ContactSection({ dictionary }) {
 
         <div className="grid md:grid-cols-2 gap-16 items-center mt-16">
           {/* Columna Izquierda: Texto y CTA */}
-          <div className="text-left">
+          <div className="text-left md:ml-22">
             <h3 className="font-orbitron text-2xl md:text-3xl text-pink-400 mb-4 animate-pink-pulse-glow">
               {dictionary.contact.subtitle}
             </h3>

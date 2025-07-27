@@ -42,9 +42,9 @@ export default function AboutSection({ dictionary }) {
                 <Image
                   src="/images/aboutMe.gif"
                   alt={dictionary.about.image_alt}
-                  width={500}
-                  height={500}
-                  className="w-full max-w-sm md:max-w-md"
+                  width={330}
+                  height={700}
+                  className="h-full md:pb-8 scale-x-[-1]"
                 />
               </div>
             </div>
@@ -52,9 +52,6 @@ export default function AboutSection({ dictionary }) {
             {/* Text Content Column */}
             <div className="text-white flex flex-col">
               <div>
-                <h2 className="text-3xl md:text-4xl font-orbitron font-bold text-shadow-glow mb-6">
-                  {dictionary.about.title}
-                </h2>
                 <p className="font-cabin text-gray-300 leading-relaxed">
                   Being recognized as the #3 React Developer in Chile is more
                   than a ranking; it&apos;s a driver for my mission to build{" "}

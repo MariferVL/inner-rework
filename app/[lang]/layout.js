@@ -1,5 +1,6 @@
 import { Orbitron, Cabin } from "next/font/google";
 import { getDictionary } from "@/lib/get-dictionary";
+import { Analytics } from '@vercel/analytics/next';
 import Header from "@/components/Header";
 import ProgressBar from "@/components/ProgressBar";
 import "../globals.css";
@@ -38,6 +39,7 @@ export default async function RootLayout({ children, params }) {
         <ProgressBar />
         <Header lang={lang} />
         <main>{children}</main>
+        <Analytics />
       </body>
     </html>
   );

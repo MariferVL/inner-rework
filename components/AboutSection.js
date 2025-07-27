@@ -3,7 +3,19 @@ import Headline from "./ui/Headline";
 
 // Simple component for tech stack items.
 const TechItem = ({ name }) => (
-  <li className="bg-white/10 border border-white/20 rounded-full px-4 py-1 text-sm font-cabin transition-colors duration-300 hover:bg-white/20 cursor-pointer">
+  <li 
+    className="
+      bg-black/30 backdrop-blur-sm
+      border border-[#aedc30]
+      rounded-md 
+      px-4 py-2 
+      text-sm font-cabin text-[#aedc30]
+      shadow-[0_0_6px_rgba(0,255,255,0.4)]
+      transition-all duration-300
+      hover:bg-[#aedc30] hover:text-black hover:shadow-[0_0_20px_rgba(0,255,255,0.8)] hover:scale-105
+      cursor-pointer
+    "
+  >
     {name}
   </li>
 );
@@ -11,8 +23,8 @@ const TechItem = ({ name }) => (
 // A styled span for creating glowing text highlights.
 const NeonHighlight = ({ children }) => (
   <span
-    className="text-[#ff79c6] font-semibold"
-    style={{ textShadow: "0 0 8px rgba(255, 121, 198, 0.7)" }}
+    className="text-fuchsia-900 font-semibold"
+    style={{ textShadow: "0 0 11px rgba(182, 51, 234, 0.7)" }}
   >
     {children}
   </span>
@@ -84,6 +96,8 @@ export default function AboutSection({ dictionary }) {
                   <TechItem name="JavaScript" />
                   <TechItem name="React" />
                   <TechItem name="Next.js" />
+                  <TechItem name="Accesibility (A11y)" />
+                  <TechItem name="Tailwind CSS" />
                 </ul>
               </div>
 

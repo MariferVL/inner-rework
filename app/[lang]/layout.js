@@ -67,7 +67,7 @@ export async function generateMetadata({ params }) {
       siteName: dictionary.meta.title,
       images: [
         {
-          url: "/images/logo.gif",
+          url: "/images/android-chrome-192x192.png",
           alt: dictionary.meta.og_image_alt,
         },
       ],
@@ -80,7 +80,7 @@ export async function generateMetadata({ params }) {
       card: "summary_large_image",
       title: dictionary.meta.og_title,
       description: dictionary.meta.og_description,
-      images: ["/images/logo.gif"],
+      images: ["/images/android-chrome-192x192.png"],
     },
 
     // Favicons

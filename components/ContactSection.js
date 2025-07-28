@@ -101,7 +101,7 @@ export default function ContactSection({ dictionary }) {
                       {emailCopied ? (
                         <>
                           <FaCheck className="inline-flex md:hidden text-black" />
-                          <span className="hidden md:inline-flex text-cyan-300">
+                          <span className="hidden md:inline-flex text-black">
                             {dictionary.contact.social.copied_email}
                           </span>
                         </>

@@ -36,21 +36,18 @@
     "info": {
       "project_1": {
         "name": "PyDay Chile Conference Website",
-        "year": 2025,
         "challenge": "To develop the Python Chile community's first SPA under a tight deadline, requiring seamless integration with a pre-existing and highly restrictive brand identity.",
         "contribution": "I architected and developed the front-end using Next.js, establishing an intuitive navigation structure. I also introduced a formal documentation process to align stakeholders and efficiently manage team dynamics.",
         "result": "The application was successfully delivered on schedule, serving as the central information hub for attendees and setting a new quality standard for the community's future web projects."
       },
       "project_2": {
         "name": "Client Project: Valeria del Real",
-        "year": 2024,
         "challenge": "To lead a non-technical client through her first digitalization process by creating her first professional website, with the key technical constraint of optimizing low-resolution source images.",
         "contribution": "I led the full project lifecycle from concept to deployment. My focus was on optimizing and processing the visual assets to ensure a professional aesthetic without compromising site performance or design integrity.",
         "result": "A fully functional and deployed website that successfully translated the client's vision into a digital platform, showcasing my ability to manage client relationships and guide them through technical processes."
       },
       "project_3": {
         "name": "Hites - Mobile E-commerce Challenge",
-        "year": 2023,
         "challenge": "To replicate a desktop product page into a fully responsive, mobile-first version in a 24-hour, high-pressure technical challenge, using only a single screenshot as a reference.",
         "contribution": "I developed the interface from scratch using React and a mobile-first layout. My resourcefulness in extracting and optimizing production visual assets was a key differentiator noted by the hiring team.",
         "result": "Delivered a functional and high-fidelity landing page, demonstrating exceptional performance under extreme time constraints. This solution positioned me as one of the top two finalists for the role."

@@ -7,6 +7,17 @@ import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import Button from "./ui/Button";
 import Headline from "./ui/Headline";
 
+// Component to display the year in a decorative way
+const YearDisplay = ({ year }) => (
+  <div className="absolute top-4 right-4 z-20 font-orbitron text-xl">
+    <div className="relative p-2 text-cyan-300 animate-cyan-pulse-glow">
+      <div className="absolute -top-1 -left-1 w-5 h-5 border-t-2 border-l-2 border-cyan-500/50"></div>
+      <div className="absolute -bottom-1 -right-1 w-5 h-5 border-b-2 border-r-2 border-pink-500/50"></div>
+      {year}
+    </div>
+  </div>
+);
+
 export default function ProjectsSection({ dictionary }) {
   const projectCardRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -20,24 +31,27 @@ export default function ProjectsSection({ dictionary }) {
   const projectsList = Object.keys(projectsData.info).map((key) => {
     const localData = {
       project_1: {
+        year: "2025",
         image: "/images/projects/pyday.jpg",
         demo: "https://pyday.cl",
         code: "https://github.com/python-chile/pydaydotcl",
         technologies: "Javascript, Next.js, Tailwind CSS, Git, Framer Motion",
       },
       project_2: {
+        year: "2024",
         image: "/images/projects/valeria.jpg",
         demo: "https://valeriadelreal.web.app/",
         code: "https://github.com/MariferVL/valeDelRealWebsite",
         technologies: "Javascript, Next.js, Tailwind CSS, Firebase, Vercel",
       },
       project_3: {
+        year: "2023",
         image: "/images/projects/hites.jpg",
         demo: "https://marifervl.github.io/Hites-Website/",
         code: "https://github.com/MariferVL/Hites-Website",
         technologies: "HTML5, CSS3, JavaScript, Bootstrap, GitHub Pages",
       },
-    };
+    }
     return { ...projectsData.info[key], ...localData[key] };
   });
 
@@ -63,14 +77,8 @@ export default function ProjectsSection({ dictionary }) {
       <div className="w-full overflow-hidden whitespace-nowrap py-4 border-t border-b border-cyan-500/20 my-6">
         <motion.div
           className="flex"
-          animate={{
-            x: ["0%", "-100%"],
-          }}
-          transition={{
-            ease: "linear",
-            duration: 15,
-            repeat: Infinity,
-          }}
+          animate={{ x: ["0%", "-100%"] }}
+          transition={{ ease: "linear", duration: 15, repeat: Infinity }}
         >
           {doubledTechs.map((tech, index) => (
             <span
@@ -88,8 +96,6 @@ export default function ProjectsSection({ dictionary }) {
   return (
     <section id="projects" className="py-20 md:py-32">
       <div className="w-full p-2 md:p-13 rounded-lg glass-effect border-2 border-cyan-500/30 relative animate-glow overflow-hidden">
-        {/* <div className="absolute inset-0 bg-grid-pattern opacity-30"></div>
-          <div className="absolute inset-0 animate-scan-line bg-scan-line-gradient z-20 pointer-events-none"></div> */}
         <div
           className="container mx-auto px-4 flex flex-col items-center"
           ref={projectCardRef}
@@ -102,8 +108,10 @@ export default function ProjectsSection({ dictionary }) {
               animate={{ opacity: 1, filter: "blur(0px)" }}
               exit={{ opacity: 0, filter: "blur(10px)" }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
-              className="relative z-10 p-4"
+              className="relative z-10 p-4" 
             >
+              <YearDisplay year={activeProject.year} />
+
               <h3 className="font-orbitron text-2xl text-pink-400 mb-11 text-center animate-pink-pulse-glow pink-glow">
                 {activeProject.name}
               </h3>

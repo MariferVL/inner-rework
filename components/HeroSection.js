@@ -29,7 +29,7 @@ export default function HeroSection({ dictionary, lang }) {
         </div>
         
         {/* Professional Mission */}
-        <p className="text-base md:text-lg font-cabin max-w-2xl mx-auto text-gray-200 mt-6 min-h-[4rem]">
+        <p className="text-base md:text-lg font-cabin max-w-2xl md:px-8 mx-auto text-gray-200 mt-6 min-h-[4rem]">
           {dictionary.hero.mission}
         </p>
         

@@ -3,7 +3,7 @@ import Headline from "./ui/Headline";
 
 // Simple component for tech stack items.
 const TechItem = ({ name }) => (
-  <li 
+  <li
     className="
       bg-black/30 backdrop-blur-sm
       border border-[#aedc30]
@@ -50,13 +50,18 @@ export default function AboutSection({ dictionary }) {
             <div className="flex justify-center items-center">
               {/* Animated container for the hologram effect */}
               <div className="relative animate-float-slow">
-                <Image
-                  src="/images/aboutMe.gif"
-                  alt={dictionary.about.image_alt}
-                  width={330}
-                  height={700}
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  width="330"
+                  height="700"
                   className="h-full md:pb-8 scale-x-[-1]"
-                />
+                >
+                  <source src="/videos/aboutMe.webm" type="video/webm" />
+                  <source src="/videos/aboutMe.mp4" type="video/mp4" />
+                </video>
               </div>
             </div>
 
@@ -91,7 +96,10 @@ export default function AboutSection({ dictionary }) {
                 >
                   {dictionary.about.tech_stack_title}
                 </h3>
-                <ul className="flex flex-wrap gap-3" aria-label={dictionary.about.tech_stack_aria_label}>
+                <ul
+                  className="flex flex-wrap gap-3"
+                  aria-label={dictionary.about.tech_stack_aria_label}
+                >
                   <TechItem name="JavaScript" />
                   <TechItem name="React" />
                   <TechItem name="Next.js" />

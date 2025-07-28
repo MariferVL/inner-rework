@@ -43,21 +43,21 @@ export default function ProjectsSection({ dictionary }) {
     const localData = {
       project_1: {
         year: "2025",
-        image: "/images/projects/pyday.jpg",
+        image: "/images/projects/pyday.webp",
         demo: "https://pyday.cl",
         code: "https://github.com/python-chile/pydaydotcl",
         technologies: "Javascript, Next.js, Tailwind CSS, Git, Framer Motion",
       },
       project_2: {
         year: "2024",
-        image: "/images/projects/valeria.jpg",
+        image: "/images/projects/valeria.webp",
         demo: "https://valeriadelreal.web.app/",
         code: "https://github.com/MariferVL/valeDelRealWebsite",
         technologies: "Javascript, Next.js, Tailwind CSS, Firebase, Vercel",
       },
       project_3: {
         year: "2023",
-        image: "/images/projects/hites.jpg",
+        image: "/images/projects/hites.webp",
         demo: "https://marifervl.github.io/Hites-Website/",
         code: "https://github.com/MariferVL/Hites-Website",
         technologies: "HTML5, CSS3, JavaScript, Bootstrap, GitHub Pages",
@@ -136,13 +136,14 @@ export default function ProjectsSection({ dictionary }) {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
                 <div className="md:col-span-2 flex justify-center md:justify-end">
-                  <div className="overflow-hidden">
+                  <div className="overflow-hidden md:w-[300px]">
                     <Image
                       src={activeProject.image}
                       alt={`${activeProject.name} project screenshot`}
-                      width={300}
-                      height={206}
-                      className="rounded-md opacity-70"
+                      width={1200}
+                      height={2253}
+                      className="rounded-md opacity-80 md:pt-8"
+                      sizes="(max-width: 768px) 90vw, 300px"
                     />
                   </div>
                 </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { FaHeart, FaCode, FaLocationArrow } from "react-icons/fa";
 
 export default function Footer({ dictionary }) {
@@ -21,6 +22,14 @@ export default function Footer({ dictionary }) {
               <FaCode className="text-cyan-400 text-sm" />
               {dictionary.footer.text}
             </span>
+            <Link
+              href="https://github.com/MariferVL"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-cyan-400 transition-colors duration-300"
+            >
+              MariferVL.
+            </Link>
           </div>
 
           {/* Year and love indicator */}

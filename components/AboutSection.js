@@ -13,7 +13,6 @@ const TechItem = ({ name }) => (
       shadow-[0_0_6px_rgba(0,255,255,0.4)]
       transition-all duration-300
       hover:bg-[#aedc30] hover:text-black hover:shadow-[0_0_20px_rgba(0,255,255,0.8)] hover:scale-105
-      cursor-pointer
     "
   >
     {name}
@@ -92,7 +91,7 @@ export default function AboutSection({ dictionary }) {
                 >
                   {dictionary.about.tech_stack_title}
                 </h3>
-                <ul className="flex flex-wrap gap-3">
+                <ul className="flex flex-wrap gap-3" aria-label={dictionary.about.tech_stack_aria_label}>
                   <TechItem name="JavaScript" />
                   <TechItem name="React" />
                   <TechItem name="Next.js" />

@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { usePathname, useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function LanguageSwitcher() {
   const router = useRouter();
@@ -10,16 +10,16 @@ export default function LanguageSwitcher() {
   const [isChecked, setIsChecked] = useState(false);
 
   useEffect(() => {
-    const langFromUrl = pathname.split('/')[1];
-    setIsChecked(langFromUrl === 'en');
+    const langFromUrl = pathname.split("/")[1];
+    setIsChecked(langFromUrl === "en");
   }, [pathname]);
 
   const handleLanguageChange = (e) => {
     const newCheckedState = e.target.checked;
     setIsChecked(newCheckedState);
 
-    const newLocale = newCheckedState ? 'en' : 'es';
-    const newPath = `/${newLocale}${pathname.substring(3) || '/'}`;
+    const newLocale = newCheckedState ? "en" : "es";
+    const newPath = `/${newLocale}${pathname.substring(3) || "/"}`;
 
     // Update the URL without scrolling to the top
     router.push(newPath, { scroll: false });
@@ -28,13 +28,13 @@ export default function LanguageSwitcher() {
   return (
     <div className="absolute top-5 right-5 z-[1000] flex items-center text-white text-sm">
       <span>Esp</span>
-      <label className="bb8-toggle mx-2">
+      <label htmlFor="language-toggle" className="bb8-toggle mx-2">
         <input
           id="language-toggle"
           className="bb8-toggle__checkbox"
           type="checkbox"
           onChange={handleLanguageChange}
-          checked={isChecked} 
+          checked={isChecked}
         />
         <div className="bb8-toggle__container">
           <div className="bb8">

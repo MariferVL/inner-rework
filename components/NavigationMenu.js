@@ -1,10 +1,21 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
 export default function NavigationMenu({ dictionary, lang }) {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const menuButtonRef = useRef(null);
+
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      setTimeout(() => {
+        document.querySelector("#mobile-menu-panel a")?.focus();
+      }, 100);
+    } else {
+      menuButtonRef.current?.focus();
+    }
+  }, [isMobileMenuOpen]);
 
   const closeAllMenus = () => {
     setMobileMenuOpen(false);
@@ -19,12 +30,18 @@ export default function NavigationMenu({ dictionary, lang }) {
 
   return (
     <>
-      {/* ===== MENÚ MÓVIL ===== */}
       <div className="lg:hidden">
         <button
+          ref={menuButtonRef}
           onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
           className="relative z-50 text-white focus:outline-none"
-          aria-label={isMobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
+          aria-label={
+            isMobileMenuOpen
+              ? dictionary.nav.menu_close_aria_label
+              : dictionary.nav.menu_open_aria_label
+          }
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobile-menu-panel"
         >
           <svg
             className="h-8 w-8 text-cyan-400 [--glow-color:theme(colors.cyan.400)] [filter:drop-shadow(0_0_3px_var(--glow-color))] hover:[filter:drop-shadow(0_0_6px_var(--glow-color))] transition-all duration-300"
@@ -62,6 +79,7 @@ export default function NavigationMenu({ dictionary, lang }) {
       </div>
 
       <div
+        id="mobile-menu-panel"
         className={`fixed top-0 left-0 h-full w-full bg-[#0a0a0a]/80 backdrop-blur-md z-40 transform transition-transform duration-300 ease-in-out lg:hidden ${
           isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}

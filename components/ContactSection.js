@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   FaEnvelope,
@@ -17,6 +16,7 @@ import Button from "./ui/Button";
 export default function ContactSection({ dictionary }) {
   const [activeMethod, setActiveMethod] = useState("email");
   const [emailCopied, setEmailCopied] = useState(false);
+  const [liveRegionMessage, setLiveRegionMessage] = useState("");
 
   const contactData = {
     email: {
@@ -25,6 +25,7 @@ export default function ContactSection({ dictionary }) {
       value: dictionary.contact.email,
       actionLabel: dictionary.contact.social.copy_email,
       action: "copy",
+      aria: dictionary.contact.social.icon_button_aria_label_email,
     },
     linkedin: {
       icon: FaLinkedin,
@@ -33,6 +34,7 @@ export default function ContactSection({ dictionary }) {
       actionLabel: dictionary.contact.social.linkedin,
       action: "link",
       href: "https://linkedin.com/in/marifervl",
+      aria: dictionary.contact.social.icon_button_aria_label_linkedin,
     },
     github: {
       icon: FaGithub,
@@ -41,13 +43,18 @@ export default function ContactSection({ dictionary }) {
       actionLabel: dictionary.contact.social.github,
       action: "link",
       href: "https://github.com/MariferVL",
+      aria: dictionary.contact.social.icon_button_aria_label_github,
     },
   };
 
   const handleCopyEmail = async () => {
     await navigator.clipboard.writeText(dictionary.contact.email);
     setEmailCopied(true);
-    setTimeout(() => setEmailCopied(false), 3000);
+    setLiveRegionMessage(dictionary.contact.social.copy_success_message);
+    setTimeout(() => {
+      setEmailCopied(false);
+      setLiveRegionMessage("");
+    }, 3000);
   };
 
   const currentData = contactData[activeMethod];
@@ -57,6 +64,10 @@ export default function ContactSection({ dictionary }) {
       id="contact"
       className="relative min-h-screen flex items-center justify-center py-20 px-4 overflow-hidden"
     >
+      <div aria-live="polite" className="sr-only">
+        {liveRegionMessage}
+      </div>
+
       <div className="absolute inset-0 z-0 bg-black">
         <div className="absolute inset-0 bg-grid-pattern-contact opacity-10"></div>
       </div>
@@ -65,7 +76,6 @@ export default function ContactSection({ dictionary }) {
         <Headline text={dictionary.contact.title} />
 
         <div className="grid md:grid-cols-2 gap-16 items-center mt-16">
-          {/* Columna Izquierda: Texto y CTA */}
           <div className="text-left md:ml-22">
             <h3 className="font-orbitron text-2xl md:text-3xl text-pink-400 mb-4 animate-pink-pulse-glow">
               {dictionary.contact.subtitle}
@@ -122,9 +132,7 @@ export default function ContactSection({ dictionary }) {
                       unstyled={true}
                       className="data-panel-action-btn"
                     >
-                      {/* Ícono de Link Externo (solo visible en móvil) */}
                       <FaExternalLinkAlt className="inline-flex md:hidden" />
-                      {/* Texto del Link (solo visible en desktop) */}
                       <span className="hidden md:inline-flex">
                         {currentData.actionLabel}
                       </span>
@@ -134,16 +142,18 @@ export default function ContactSection({ dictionary }) {
               </AnimatePresence>
             </div>
 
-            {/* Íconos Orbitantes */}
             {Object.keys(contactData).map((key, index) => {
               const Icon = contactData[key].icon;
+              const isActive = activeMethod === key;
               return (
                 <button
                   key={key}
                   className={`orbiting-icon icon-pos-${index + 1} ${
-                    activeMethod === key ? "active" : ""
+                    isActive ? "active" : ""
                   }`}
                   onClick={() => setActiveMethod(key)}
+                  aria-label={contactData[key].aria}
+                  aria-pressed={isActive}
                 >
                   <Icon className="w-8 h-8" />
                 </button>

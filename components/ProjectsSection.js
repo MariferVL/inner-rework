@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import Button from "./ui/Button";
 import Headline from "./ui/Headline";
@@ -21,6 +21,17 @@ const YearDisplay = ({ year }) => (
 export default function ProjectsSection({ dictionary }) {
   const projectCardRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [liveRegionMessage, setLiveRegionMessage] = useState("");
+
+  const shouldReduceMotion = useReducedMotion();
+
+  useEffect(() => {
+    if (projectsList.length > 0) {
+      setLiveRegionMessage(
+        `${dictionary.projects.project_change_announcement} ${projectsList[0].name}`
+      );
+    }
+  }, []);
 
   if (!dictionary || !dictionary.projects || !dictionary.projects.info) {
     return null;
@@ -51,7 +62,7 @@ export default function ProjectsSection({ dictionary }) {
         code: "https://github.com/MariferVL/Hites-Website",
         technologies: "HTML5, CSS3, JavaScript, Bootstrap, GitHub Pages",
       },
-    }
+    };
     return { ...projectsData.info[key], ...localData[key] };
   });
 
@@ -63,6 +74,9 @@ export default function ProjectsSection({ dictionary }) {
 
   const handleProjectChange = (index) => {
     setActiveIndex(index);
+    setLiveRegionMessage(
+      `${dictionary.projects.project_change_announcement} ${projectsList[index].name}`
+    );
     projectCardRef.current?.scrollIntoView({
       behavior: "smooth",
       block: "start",
@@ -77,7 +91,8 @@ export default function ProjectsSection({ dictionary }) {
       <div className="w-full overflow-hidden whitespace-nowrap py-4 border-t border-b border-cyan-500/20 my-6">
         <motion.div
           className="flex"
-          animate={{ x: ["0%", "-100%"] }}
+          // La animación se desactiva si el usuario lo prefiere
+          animate={shouldReduceMotion ? { x: 0 } : { x: ["0%", "-100%"] }}
           transition={{ ease: "linear", duration: 15, repeat: Infinity }}
         >
           {doubledTechs.map((tech, index) => (
@@ -95,6 +110,11 @@ export default function ProjectsSection({ dictionary }) {
 
   return (
     <section id="projects" className="py-20 md:py-32">
+      {/* Región viva para anunciar cambios */}
+      <div aria-live="polite" className="sr-only">
+        {liveRegionMessage}
+      </div>
+
       <div className="w-full p-2 md:p-13 rounded-lg glass-effect border-2 border-cyan-500/30 relative animate-glow overflow-hidden">
         <div
           className="container mx-auto px-4 flex flex-col items-center"
@@ -108,14 +128,12 @@ export default function ProjectsSection({ dictionary }) {
               animate={{ opacity: 1, filter: "blur(0px)" }}
               exit={{ opacity: 0, filter: "blur(10px)" }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
-              className="relative z-10 p-4" 
+              className="relative z-10 p-4"
             >
               <YearDisplay year={activeProject.year} />
-
               <h3 className="font-orbitron text-2xl text-pink-400 mb-11 text-center animate-pink-pulse-glow pink-glow">
                 {activeProject.name}
               </h3>
-
               <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
                 <div className="md:col-span-2 flex justify-center md:justify-end">
                   <div className="overflow-hidden">
@@ -128,7 +146,6 @@ export default function ProjectsSection({ dictionary }) {
                     />
                   </div>
                 </div>
-
                 <div className="md:col-span-3 flex flex-col md:ml-22">
                   <div>
                     <h4 className="font-orbitron text-lg text-cyan-300 md:mt-8 mb-1 animate-cyan-pulse-glow cyan-glow ">
@@ -156,21 +173,33 @@ export default function ProjectsSection({ dictionary }) {
                   </div>
 
                   <TechMarquee technologies={activeProject.technologies} />
-
                   <div className="flex flex-col sm:flex-row sm:justify-center gap-4 mt-auto pt-4">
                     <Button
                       href={activeProject.demo}
                       color="#06b6d4"
                       className="!px-6 !py-2.5"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={dictionary.projects.demo_link_aria_label.replace(
+                        "{projectName}",
+                        activeProject.name
+                      )}
                     >
-                      <FaExternalLinkAlt /> {projectsData.demoLabel}
+                      <FaExternalLinkAlt aria-hidden="true" />{" "}
+                      {projectsData.demoLabel}
                     </Button>
                     <Button
                       href={activeProject.code}
                       color="#ffffff"
                       className="!px-6 !py-2.5"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={dictionary.projects.code_link_aria_label.replace(
+                        "{projectName}",
+                        activeProject.name
+                      )}
                     >
-                      <FaGithub /> {projectsData.codeLabel}
+                      <FaGithub aria-hidden="true" /> {projectsData.codeLabel}
                     </Button>
                   </div>
                 </div>
@@ -189,6 +218,8 @@ export default function ProjectsSection({ dictionary }) {
                   ? "bg-pink-500/40 border-pink-500 text-white animate-pulse"
                   : "bg-gray-500/20 border-transparent text-gray-400 hover:border-pink-500/50"
               }`}
+              aria-label={`${dictionary.projects.project_selector_aria_label} ${project.name}`}
+              aria-current={activeIndex === index ? "true" : "false"}
             >
               0{index + 1}
             </button>

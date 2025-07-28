@@ -12,13 +12,6 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
@@ -660,5 +653,27 @@ body {
     border-radius: 80%;
     padding: 0;
     font-size: 3rem;
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .glitch::before,
+  .glitch::after {
+    animation: none;
+  }
+  .animate-float,
+  .animate-glow,
+  .animate-scan-line,
+  .animate-cyan-pulse-glow,
+  .animate-pink-pulse-glow {
+    animation: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
   }
 }

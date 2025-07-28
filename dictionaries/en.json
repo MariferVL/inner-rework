@@ -10,7 +10,10 @@
     "about": "About Me",
     "projects": "Projects",
     "contact": "Contact",
-    "logoAlt": "Logo with a violet background and María-Fernanda's initials."
+    "logoAlt": "MariferVL's Logo - Go to homepage",
+    "aria_label": "Main navigation",
+    "menu_open_aria_label": "Open main menu",
+    "menu_close_aria_label": "Close main menu"
   },
   "hero": {
     "name": "María-Fernanda Villalobos",
@@ -22,6 +25,7 @@
     "image_alt": "Hologram of María-Fernanda projected from a mobile phone.",
     "paragraph_1": "My journey started in health sciences, decoding human needs. Today, I decode the digital world, building technology that feels intuitive and human. This unique fusion of empathy and code led to my recognition as the #3 React Developer in Chile by GitHunter.",
     "paragraph_2": "My development philosophy is built on precision and inclusion. I craft pixel-perfect interfaces and optimize for speed because I believe every millisecond matters. But my true passion is building a more accessible web, ensuring the digital future we're coding today is open to everyone.",
+    "tech_stack_aria_label": "List of my core technologies",
     "tech_stack_title": "Core Technologies:",
     "ideal_team_title": "My Ideal Environment:",
     "ideal_team_paragraph": "I thrive in collaborative teams that value creative problem-solving and are passionate about building products that make a real difference."
@@ -33,6 +37,10 @@
     "resultLabel": "The Result",
     "demoLabel": "View Demo",
     "codeLabel": "View Code",
+    "project_selector_aria_label": "Show project:",
+    "project_change_announcement": "Now showing project:",
+    "demo_link_aria_label": "View the live demo for {projectName} (opens in a new tab)",
+    "code_link_aria_label": "View the source code for {projectName} (opens in a new tab)",
     "info": {
       "project_1": {
         "name": "PyDay Chile Conference Website",
@@ -69,13 +77,18 @@
       "linkedin": "Connect on LinkedIn",
       "github": "View my GitHub",
       "copy_email": "Copy email address",
-      "copied_email": "Copied to clipboard!"
+      "copied_email": "Copied to clipboard!",
+      "icon_button_aria_label_email": "Show email contact details",
+      "icon_button_aria_label_linkedin": "Show LinkedIn contact details",
+      "icon_button_aria_label_github": "Show GitHub contact details",
+      "copy_success_message": "Email copied to clipboard"
     }
   },
   "footer": {
     "text": "Designed and built with care by",
     "madeWith_part1": "Made with",
     "madeWith_part2": "and tea",
-    "year": "2025"
+    "year": "2025",
+    "github_link_aria_label": "Visit MariferVL's GitHub profile (opens in a new tab)"
   }
 }

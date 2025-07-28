@@ -10,7 +10,10 @@
     "about": "Sobre Mí",
     "projects": "Proyectos",
     "contact": "Contacto",
-    "logoAlt": "Logo con fondo violate y las iniciales de María-Fernanda."
+    "logoAlt": "Logo de MariferVL - Ir a la página de inicio",
+    "aria_label": "Navegación principal",
+    "menu_open_aria_label": "Abrir menú principal",
+    "menu_close_aria_label": "Cerrar menú principal"
   },
   "hero": {
     "name": "María-Fernanda Villalobos",
@@ -22,6 +25,7 @@
     "image_alt": "Holograma de María-Fernanda proyectado desde un teléfono móvil.",
     "paragraph_1": "Mi viaje empezó en las ciencias de la salud, decodificando las necesidades humanas. Hoy, decodifico el mundo digital, construyendo tecnología que se siente intuitiva y humana. Esta fusión única de empatía y código me llevó a ser reconocida como la #3 React Developer en Chile por GitHunter.",
     "paragraph_2": "Mi filosofía de desarrollo se basa en la precisión y la inclusión. Construyo interfaces pixel-perfect y optimizo la velocidad porque creo que cada milisegundo cuenta. Pero mi verdadera pasión es construir una web más accesible, asegurando que el futuro digital que estamos programando hoy esté abierto para todos.",
+    "tech_stack_aria_label": "Lista de mis tecnologías principales",
     "tech_stack_title": "Tecnologías principales:",
     "ideal_team_title": "Mi entorno ideal:",
     "ideal_team_paragraph": "Me desenvuelvo en equipos colaborativos que valoran la resolución creativa de problemas y sienten pasión por construir productos que marcan una verdadera diferencia."
@@ -33,6 +37,10 @@
     "resultLabel": "El Resultado",
     "demoLabel": "Ver Demo",
     "codeLabel": "Ver Código",
+    "project_selector_aria_label": "Mostrar proyecto:",
+    "project_change_announcement": "Mostrando proyecto:",
+    "demo_link_aria_label": "Ver la demo en vivo del proyecto {projectName} (se abre en una nueva pestaña)",
+    "code_link_aria_label": "Ver el código fuente del proyecto {projectName} (se abre en una nueva pestaña)",
     "info": {
       "project_1": {
         "name": "Sitio Web Conferencia PyDay Chile",
@@ -69,13 +77,18 @@
       "linkedin": "Conecta en LinkedIn",
       "github": "Ve mi GitHub",
       "copy_email": "Copiar dirección de correo",
-      "copied_email": "¡Copiado al portapapeles!"
+      "copied_email": "¡Copiado al portapapeles!",
+      "icon_button_aria_label_email": "Mostrar detalles de contacto por correo",
+      "icon_button_aria_label_linkedin": "Mostrar detalles de contacto de LinkedIn",
+      "icon_button_aria_label_github": "Mostrar detalles de contacto de GitHub",
+      "copy_success_message": "Correo copiado al portapapeles"
     }
   },
   "footer": {
     "text": "Diseñado y construido con cuidado por",
     "madeWith_part1": "Hecho con",
     "madeWith_part2": "y té",
-    "year": "2025"
+    "year": "2025",
+    "github_link_aria_label": "Visita el perfil de GitHub de MariferVL (se abre en una nueva pestaña)"
   }
 }

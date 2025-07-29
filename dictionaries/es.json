@@ -19,7 +19,8 @@
   "hero": {
     "name": "María-Fernanda Villalobos",
     "headline": "Frontend Developer | #3 React.js Developer en Chile (GitHunter)",
-    "mission": "Apasionada por el Diseño Inclusivo y la creación de experiencias web accesibles. Transformo problemas complejos en soluciones de software fluidas, eficientes e intuitivas."
+    "mission": "Apasionada por el Diseño Inclusivo y la creación de experiencias web accesibles. Transformo problemas complejos en soluciones de software fluidas, eficientes e intuitivas.",
+    "cta_aria_label": "Ver mis proyectos"
   },
   "about": {
     "title": "Sobre Mí",

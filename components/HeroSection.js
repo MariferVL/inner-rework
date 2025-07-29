@@ -38,6 +38,7 @@ export default function HeroSection({ dictionary, lang }) {
           <Link 
             href={`/${lang}#projects`} 
             className="inline-block px-8 py-3 font-orbitron uppercase text-sm tracking-widest bg-transparent border-2 border-[#65e1ff] text-[#65e1ff] rounded-full transition-all duration-300 hover:bg-[#65e1ff] hover:text-black hover:shadow-[0_0_25px_#65e1ff] transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[#65e1ff]/50"
+            aria-label={dictionary.hero.cta_aria_label}
           >
             {dictionary.nav.projects}
           </Link>

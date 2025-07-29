@@ -15,7 +15,7 @@ export default async function Header({ lang }) {
       >
         <div className="container mx-auto flex items-center justify-between">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:static lg:translate-x-0 lg:translate-y-0">
-            <Link href={`/${lang}`}>
+            <Link href={`/${lang}`} aria-label={dictionary.nav.logoAlt}>
               <Image
                 src="/images/logo.webp"
                 alt={dictionary.nav.logoAlt}

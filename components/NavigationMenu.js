@@ -92,6 +92,7 @@ export default function NavigationMenu({ dictionary, lang }) {
                   href={`/${lang}${link.href}`}
                   className="block py-2 text-2xl nav-link inline-block"
                   onClick={closeAllMenus}
+                  aria-label={link.text}
                 >
                   {link.text}
                 </Link>

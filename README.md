@@ -1,6 +1,6 @@
 # Marifer VL - Personal Portfolio
 
-![Portfolio Screenshot](./public/images/screenshot.png)
+![Portfolio Screenshot](./public/images/screenshot.webp)
 ### [Live Demo](https://marifervl.vercel.app) ---
 
 ## 🚀 About This Project

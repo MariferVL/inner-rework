@@ -77,7 +77,6 @@ export default function NavigationMenu({ dictionary, lang }) {
           </svg>
         </button>
       </div>
-
       <div
         id="mobile-menu-panel"
         className={`fixed top-0 left-0 h-full w-full bg-[#0a0a0a]/80 backdrop-blur-md z-40 transform transition-transform duration-300 ease-in-out lg:hidden ${
@@ -101,26 +100,41 @@ export default function NavigationMenu({ dictionary, lang }) {
           </ul>
         </nav>
       </div>
-
       <div className="hidden lg:flex flex-grow justify-center">
         <ul className="flex px-8 items-center bg-[#02020754] rounded-md shadow-lg">
           <li className="nav-item p-4">
-            <Link href={`/${lang}#home`} className="nav-link inline-block">
+            <Link
+              href={`/${lang}#home`}
+              className="nav-link inline-block"
+              aria-label={dictionary.nav.home}
+            >
               {dictionary.nav.home}
             </Link>
           </li>
           <li className="nav-item p-4">
-            <Link href={`/${lang}#about`} className="nav-link inline-block">
+            <Link
+              href={`/${lang}#about`}
+              className="nav-link inline-block"
+              aria-label={dictionary.nav.about}
+            >
               {dictionary.nav.about}
             </Link>
           </li>
           <li className="nav-item p-4">
-            <Link href={`/${lang}#projects`} className="nav-link inline-block">
+            <Link
+              href={`/${lang}#projects`}
+              className="nav-link inline-block"
+              aria-label={dictionary.nav.projects}
+            >
               {dictionary.nav.projects}
             </Link>
           </li>
           <li className="nav-item p-4">
-            <Link href={`/${lang}#contact`} className="nav-link inline-block">
+            <Link
+              href={`/${lang}#contact`}
+              className="nav-link inline-block"
+              aria-label={dictionary.nav.contact}
+            >
               {dictionary.nav.contact}
             </Link>
           </li>

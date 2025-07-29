@@ -9,7 +9,7 @@ import Headline from "./ui/Headline";
 
 // Component to display the year in a decorative way
 const YearDisplay = ({ year }) => (
-  <div className="absolute top-4 right-4 z-20 font-orbitron text-xl">
+  <div className="relative md:absolute md:top-4 md:right-4 z-20 font-orbitron text-xl">
     <div
       className="relative p-2 text-cyan-300 animate-cyan-pulse-glow"
       style={{ textShadow: "0 0 6px rgba(255, 255, 255, 0.4)" }}
@@ -133,13 +133,15 @@ export default function ProjectsSection({ dictionary }) {
               transition={{ duration: 0.8, ease: "easeInOut" }}
               className="relative z-10 p-4 invisible-on-load"
             >
-              <YearDisplay year={activeProject.year} />
-              <h3
-                className="font-orbitron text-2xl text-pink-400 mb-11 text-center animate-pink-pulse-glow pink-glow"
-                style={{ textShadow: "0 0 6px rgba(255, 255, 255, 0.4)" }}
-              >
-                {activeProject.name}
-              </h3>
+              <div className="flex flex-col items-center md:relative">
+                <YearDisplay year={activeProject.year} />
+                <h3
+                  className="font-orbitron text-2xl text-pink-400 mt-4 md:mt-0 mb-11 text-center animate-pink-pulse-glow pink-glow"
+                  style={{ textShadow: "0 0 6px rgba(255, 255, 255, 0.4)" }}
+                >
+                  {activeProject.name}
+                </h3>
+              </div>
               <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
                 <div className="md:col-span-2 flex justify-center md:justify-end">
                   <div className="overflow-hidden md:w-[300px]">

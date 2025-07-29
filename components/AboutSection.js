@@ -22,7 +22,10 @@ const TechItem = ({ name }) => (
 // A styled span for creating glowing text highlights.
 const NeonHighlight = ({ children }) => (
   <span
-    className="text-fuchsia-900 font-semibold"
+    className="text-fuchsia-700 font-bold 
+      animate-glow
+      transition-all duration-300
+      hover:scale-105 hover:text-fuchsia-500"
     style={{ textShadow: "0 0 11px rgba(182, 51, 234, 0.7)" }}
   >
     {children}

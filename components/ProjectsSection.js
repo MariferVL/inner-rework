@@ -93,8 +93,7 @@ export default function ProjectsSection({ dictionary }) {
     return (
       <div className="w-full overflow-hidden whitespace-nowrap py-4 border-t border-b border-cyan-500/20 my-6">
         <motion.div
-          className="flex invisible-on-load"
-          // La animación se desactiva si el usuario lo prefiere
+          className="flex"
           animate={shouldReduceMotion ? { x: 0 } : { x: ["0%", "-100%"] }}
           transition={{ ease: "linear", duration: 15, repeat: Infinity }}
         >
@@ -113,7 +112,6 @@ export default function ProjectsSection({ dictionary }) {
 
   return (
     <section id="projects" className="py-20 md:py-32">
-      {/* Región viva para anunciar cambios */}
       <div aria-live="polite" className="sr-only">
         {liveRegionMessage}
       </div>

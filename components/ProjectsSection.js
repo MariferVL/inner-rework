@@ -118,7 +118,7 @@ export default function ProjectsSection({ dictionary }) {
         {liveRegionMessage}
       </div>
 
-      <div className="w-full p-2 md:p-13 rounded-lg glass-effect border-2 border-cyan-500/30 relative animate-glow overflow-hidden">
+      <div className="w-full py-20 md:py-32 rounded-lg glass-effect border-2 border-cyan-500/30 relative animate-glow overflow-hidden">
         <div
           className="container mx-auto px-4 flex flex-col items-center"
           ref={projectCardRef}

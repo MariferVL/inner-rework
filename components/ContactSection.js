@@ -107,6 +107,7 @@ export default function ContactSection({ dictionary }) {
                       onClick={handleCopyEmail}
                       unstyled={true}
                       className="data-panel-action-btn"
+                      aria-label={dictionary.contact.social.copy_email}
                     >
                       {emailCopied ? (
                         <>
@@ -131,6 +132,7 @@ export default function ContactSection({ dictionary }) {
                       rel="noopener noreferrer"
                       unstyled={true}
                       className="data-panel-action-btn"
+                      aria-label={currentData.actionLabel}
                     >
                       <FaExternalLinkAlt className="inline-flex md:hidden" />
                       <span className="hidden md:inline-flex">

@@ -3,7 +3,7 @@
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-export default function LanguageSwitcher() {
+export default function LanguageSwitcher({ ariaLabel }) {
   const router = useRouter();
   const pathname = usePathname();
 
@@ -35,6 +35,8 @@ export default function LanguageSwitcher() {
           type="checkbox"
           onChange={handleLanguageChange}
           checked={isChecked}
+          aria-label={ariaLabel}
+          aria-checked={isChecked}
         />
         <div className="bb8-toggle__container">
           <div className="bb8">

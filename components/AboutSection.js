@@ -53,9 +53,10 @@ export default function AboutSection({ dictionary }) {
                 <Image
                   src="/images/aboutMe.webp"
                   alt={dictionary.about.image_alt}
-                  width={330}
-                  height={700}
-                  className="h-full md:pb-8 scale-x-[-1]"
+                  width={648}
+                  height={1152}
+                  sizes="(max-width: 1024px) 90vw, 330px"
+                  className="w-full max-w-[330px] h-auto md:pb-8 scale-x-[-1]"
                 />
               </div>
             </div>

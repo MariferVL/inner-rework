@@ -17,17 +17,20 @@ export default async function Header({ lang }) {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:static lg:translate-x-0 lg:translate-y-0">
             <Link href={`/${lang}`}>
               <Image
-                src="/images/logo.webp" 
-                alt= {dictionary.nav.logoAlt}
+                src="/images/logo.webp"
+                alt={dictionary.nav.logoAlt}
                 width={80}
                 height={80}
-                priority 
+                priority
                 className="rounded-full w-16 h-16 md:w-20 md:h-20"
               />
             </Link>
           </div>
           <NavigationMenu dictionary={dictionary} lang={lang} />
-          <LanguageSwitcher lang={lang} />
+          <LanguageSwitcher
+            lang={lang}
+            ariaLabel={dictionary.nav.language_switcher_aria_label}
+          />
         </div>
       </nav>
     </header>

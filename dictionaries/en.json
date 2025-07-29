@@ -13,7 +13,8 @@
     "logoAlt": "MariferVL's Logo - Go to homepage",
     "aria_label": "Main navigation",
     "menu_open_aria_label": "Open main menu",
-    "menu_close_aria_label": "Close main menu"
+    "menu_close_aria_label": "Close main menu",
+    "language_switcher_aria_label": "Language switcher, toggle to select between Spanish and English"
   },
   "hero": {
     "name": "María-Fernanda Villalobos",

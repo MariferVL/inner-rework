@@ -16,18 +16,14 @@ export default async function Header({ lang }) {
         <div className="container mx-auto flex items-center justify-between">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:static lg:translate-x-0 lg:translate-y-0">
             <Link href={`/${lang}`}>
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                width="80"
-                height="80"
+              <Image
+                src="/images/logo.webp" 
+                alt= {dictionary.nav.logoAlt}
+                width={80}
+                height={80}
+                priority 
                 className="rounded-full w-16 h-16 md:w-20 md:h-20"
-              >
-                <source src="/videos/logo.webm" type="video/webm" />
-                <source src="/videos/logo.mp4" type="video/mp4" />
-              </video>
+              />
             </Link>
           </div>
           <NavigationMenu dictionary={dictionary} lang={lang} />

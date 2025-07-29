@@ -50,18 +50,13 @@ export default function AboutSection({ dictionary }) {
             <div className="flex justify-center items-center">
               {/* Animated container for the hologram effect */}
               <div className="relative animate-float-slow">
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  width="330"
-                  height="700"
+                <Image
+                  src="/images/aboutMe.webp"
+                  alt={dictionary.about.image_alt}
+                  width={330}
+                  height={700}
                   className="h-full md:pb-8 scale-x-[-1]"
-                >
-                  <source src="/videos/aboutMe.webm" type="video/webm" />
-                  <source src="/videos/aboutMe.mp4" type="video/mp4" />
-                </video>
+                />
               </div>
             </div>
 

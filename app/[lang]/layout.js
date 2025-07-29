@@ -67,7 +67,7 @@ export async function generateMetadata({ params }) {
       siteName: dictionary.meta.title,
       images: [
         {
-          url: "/images/android-chrome-192x192.png",
+          url: "/images/logo.webp",
           alt: dictionary.meta.og_image_alt,
         },
       ],

@@ -37,6 +37,9 @@ body {
   z-index: -1;
 }
 
+.invisible-on-load {
+  opacity: 0;
+}
 
 /* --- Language Switch Styles --- */
 

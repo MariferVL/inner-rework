@@ -90,7 +90,7 @@ export default function ProjectsSection({ dictionary }) {
     return (
       <div className="w-full overflow-hidden whitespace-nowrap py-4 border-t border-b border-cyan-500/20 my-6">
         <motion.div
-          className="flex"
+          className="flex invisible-on-load"
           // La animación se desactiva si el usuario lo prefiere
           animate={shouldReduceMotion ? { x: 0 } : { x: ["0%", "-100%"] }}
           transition={{ ease: "linear", duration: 15, repeat: Infinity }}
@@ -128,7 +128,7 @@ export default function ProjectsSection({ dictionary }) {
               animate={{ opacity: 1, filter: "blur(0px)" }}
               exit={{ opacity: 0, filter: "blur(10px)" }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
-              className="relative z-10 p-4"
+              className="relative z-10 p-4 invisible-on-load"
             >
               <YearDisplay year={activeProject.year} />
               <h3 className="font-orbitron text-2xl text-pink-400 mb-11 text-center animate-pink-pulse-glow pink-glow">

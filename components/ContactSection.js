@@ -97,7 +97,7 @@ export default function ContactSection({ dictionary }) {
                   animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
                   exit={{ opacity: 0, scale: 0.8, filter: "blur(10px)" }}
                   transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
-                  className="data-panel"
+                  className="data-panel invisible-on-load"
                 >
                   <h4 className="data-panel-title">{currentData.title}</h4>
                   <p className="data-panel-value">{currentData.value}</p>

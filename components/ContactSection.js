@@ -77,13 +77,13 @@ export default function ContactSection({ dictionary }) {
 
         <div className="grid md:grid-cols-2 gap-16 items-center mt-16">
           <div className="text-left md:ml-22">
-            <h3 className="font-orbitron text-2xl md:text-3xl text-pink-400 mb-4 animate-pink-pulse-glow">
+            <h3 className="font-orbitron text-2xl md:text-3xl text-pink-400 mb-4 animate-pink-pulse-glow" style={{ textShadow: "0 0 6px rgba(255, 255, 255, 0.4)" }}>
               {dictionary.contact.subtitle}
             </h3>
             <p className="font-cabin text-lg text-gray-300 mb-6 leading-relaxed">
               {dictionary.contact.invitation}
             </p>
-            <p className="font-orbitron text-xl text-cyan-300 animate-cyan-pulse-glow">
+            <p className="font-orbitron text-xl text-cyan-300 animate-cyan-pulse-glow" style={{ textShadow: "0 0 6px rgba(255, 255, 255, 0.4)" }}>
               {dictionary.contact.cta}
             </p>
           </div>

@@ -10,7 +10,10 @@ import Headline from "./ui/Headline";
 // Component to display the year in a decorative way
 const YearDisplay = ({ year }) => (
   <div className="absolute top-4 right-4 z-20 font-orbitron text-xl">
-    <div className="relative p-2 text-cyan-300 animate-cyan-pulse-glow" style={{ textShadow: "0 0 6px rgba(255, 255, 255, 0.4)" }}>
+    <div
+      className="relative p-2 text-cyan-300 animate-cyan-pulse-glow"
+      style={{ textShadow: "0 0 6px rgba(255, 255, 255, 0.4)" }}
+    >
       <div className="absolute -top-1 -left-1 w-5 h-5 border-t-2 border-l-2 border-cyan-500/50"></div>
       <div className="absolute -bottom-1 -right-1 w-5 h-5 border-b-2 border-r-2 border-pink-500/50"></div>
       {year}
@@ -131,7 +134,10 @@ export default function ProjectsSection({ dictionary }) {
               className="relative z-10 p-4 invisible-on-load"
             >
               <YearDisplay year={activeProject.year} />
-              <h3 className="font-orbitron text-2xl text-pink-400 mb-11 text-center animate-pink-pulse-glow pink-glow">
+              <h3
+                className="font-orbitron text-2xl text-pink-400 mb-11 text-center animate-pink-pulse-glow pink-glow"
+                style={{ textShadow: "0 0 6px rgba(255, 255, 255, 0.4)" }}
+              >
                 {activeProject.name}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
@@ -149,7 +155,10 @@ export default function ProjectsSection({ dictionary }) {
                 </div>
                 <div className="md:col-span-3 flex flex-col md:ml-22">
                   <div>
-                    <h4 className="font-orbitron text-lg text-cyan-300 md:mt-8 mb-1 animate-cyan-pulse-glow cyan-glow"   style={{ textShadow: "0 0 6px rgba(255, 255, 255, 0.4)" }}>
+                    <h4
+                      className="font-orbitron text-lg text-cyan-300 md:mt-8 mb-1 animate-cyan-pulse-glow cyan-glow"
+                      style={{ textShadow: "0 0 6px rgba(255, 255, 255, 0.4)" }}
+                    >
                       {projectsData.challengeLabel}
                     </h4>
                     <p className="font-cabin text-gray-300 mb-4 md:mt-4 md:px-11 md:text-justify">
@@ -157,7 +166,10 @@ export default function ProjectsSection({ dictionary }) {
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-orbitron text-lg text-cyan-300 md:mt-8 mb-1 animate-cyan-pulse-glow cyan-glow ">
+                    <h4
+                      className="font-orbitron text-lg text-cyan-300 md:mt-8 mb-1 animate-cyan-pulse-glow cyan-glow"
+                      style={{ textShadow: "0 0 6px rgba(255, 255, 255, 0.4)" }}
+                    >
                       {projectsData.contributionLabel}
                     </h4>
                     <p className="font-cabin text-gray-300 mb-4 md:mt-4 md:px-11 md:text-justify">
@@ -165,7 +177,10 @@ export default function ProjectsSection({ dictionary }) {
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-orbitron text-lg text-cyan-300 md:mt-8 mb-1 animate-cyan-pulse-glow cyan-glow ">
+                    <h4
+                      className="font-orbitron text-lg text-cyan-300 md:mt-8 mb-1 animate-cyan-pulse-glow cyan-glow"
+                      style={{ textShadow: "0 0 6px rgba(255, 255, 255, 0.4)" }}
+                    >
                       {projectsData.resultLabel}
                     </h4>
                     <p className="font-cabin text-gray-300 mb-4 md:mt-4 md:px-11 md:text-justify">

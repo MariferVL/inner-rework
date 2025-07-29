@@ -23,7 +23,7 @@ export default function Footer({ dictionary }) {
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-cyan-400 transition-colors duration-300"
-              aria-label={dictionary.footer.github_link_aria_label} 
+              aria-label={dictionary.footer.github_link_aria_label}
             >
               MariferVL.
             </Link>
@@ -34,7 +34,11 @@ export default function Footer({ dictionary }) {
             <span className="text-gray-600">•</span>
             <span className="flex items-center gap-1">
               {dictionary.footer.madeWith_part1}
-              <FaHeart className="text-pink-400" aria-hidden="true" />
+              <FaHeart
+                className="text-pink-400"
+                aria-hidden="true"
+                style={{ textShadow: "0 0 6px rgba(255, 255, 255, 0.4)" }}
+              />
               {dictionary.footer.madeWith_part2}
             </span>
           </div>

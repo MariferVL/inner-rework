@@ -37,6 +37,29 @@ const NeonSeparator = () => (
   <div className="w-full h-px bg-gradient-to-r from-transparent via-[#65e1ff]/50 to-transparent my-4"></div>
 );
 
+
+function renderNeon(text) {
+  const parts = text.split(/(\[\[neon\]\]|\[\[\/neon\]\])/);
+
+  let isNeon = false;
+
+  return parts
+    .map((part, i) => {
+      if (part === '[[neon]]') {
+        isNeon = true;
+        return null;
+      }
+      if (part === '[[/neon]]') {
+        isNeon = false;
+        return null;
+      }
+
+      return isNeon ? <NeonHighlight key={i}>{part}</NeonHighlight> : part;
+    })
+    .filter(Boolean);
+}
+
+
 export default function AboutSection({ dictionary }) {
   return (
     <section
@@ -68,20 +91,11 @@ export default function AboutSection({ dictionary }) {
             <div className="text-white flex flex-col">
               <div>
                 <p className="font-cabin text-gray-300 leading-relaxed">
-                  Being recognized as the #3 React Developer in Chile is more
-                  than a ranking; it&apos;s a driver for my mission to build{" "}
-                  <NeonHighlight>technology that feels human</NeonHighlight>. I
-                  strive to create interfaces where performance and empathy
-                  coexist, ensuring every interaction is both powerful and
-                  intuitive.
+                  {renderNeon(dictionary.about.paragraph_1)}
                 </p>
+
                 <p className="font-cabin text-gray-300 leading-relaxed mt-4">
-                  My background in health sciences taught me to{" "}
-                  <NeonHighlight>listen with empathy</NeonHighlight>. Today, I
-                  apply that same principle to code, focusing on the
-                  &apos;details that matter.&apos; This translates into
-                  accessible, user-centric experiences where every pixel has a
-                  purpose.
+                  {renderNeon(dictionary.about.paragraph_2)}
                 </p>
               </div>
 

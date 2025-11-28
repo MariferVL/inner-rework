@@ -3,7 +3,7 @@ import { match } from "@formatjs/intl-localematcher";
 import Negotiator from "negotiator";
 
 let locales = ["es", "en"];
-export let defaultLocale = "es";
+export let defaultLocale = "en";
 
 function getLocale(request) {
   const negotiatorHeaders = {};
@@ -16,6 +16,9 @@ function getLocale(request) {
 
 export function middleware(request) {
   const { pathname } = request.nextUrl;
+  if (pathname === '/links') {
+    return NextResponse.next();
+  }
 
   const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
@@ -33,7 +36,7 @@ export const config = {
   matcher: [
     {
       source:
-        "/((?!api|_next/static|_next/image|images|videos|favicon.ico|site.webmanifest|robots.txt).*)",
+        "/((?!api|_next/static|_next/image|images|videos|favicon.ico|site.webmanifest|robots.txt|links).*)",
       missing: [
         { type: "header", key: "next-router-prefetch" },
         { type: "header", key: "purpose", value: "prefetch" },

@@ -47,7 +47,7 @@ export default function LinksPage() {
                 <div className="glass-effect rounded-lg p-8 shadow-2xl border border-cyan-500/20">
                     {/* Header */}
                     <header className="text-center mb-8">
-                        <h1 className="text-2xl md:text-3xl font-bold mb-2 text-white glitch" data-text="Marifer Villalobos">
+                        <h1 className="text-2xl md:text-3xl font-bold mb-2 text-white glitch" data-text="Marifer VL">
                             Marifer VL
                         </h1>
                         <p className="text-cyan-400 text-sm md:text-base font-mono mb-2">

@@ -83,6 +83,7 @@ export default function AboutSection({ dictionary }) {
                   height={1152}
                   sizes="(max-width: 1024px) 90vw, 330px"
                   className="w-full max-w-[330px] h-auto md:pb-8 scale-x-[-1]"
+                  unoptimized
                 />
               </div>
             </div>

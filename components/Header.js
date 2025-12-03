@@ -23,6 +23,7 @@ export default async function Header({ lang }) {
                 height={80}
                 priority
                 className="rounded-full w-16 h-16 md:w-20 md:h-20"
+                unoptimized
               />
             </Link>
           </div>
